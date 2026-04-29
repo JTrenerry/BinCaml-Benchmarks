@@ -8,4 +8,4 @@ General structure for each example is
   - example.yml   (The Example expected outputs (SVCOMP has certain flags here that say what it should do / pass))
 
 # List of benchmarks
-[SVCOMP](google.com)
+[SVCOMP](https://gitlab.com/sosy-lab/sv-comp)
