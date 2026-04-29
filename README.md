@@ -8,4 +8,4 @@ General structure for each example is
   - example.yml   (The Example expected outputs (SVCOMP has certain flags here that say what it should do / pass))
 
 # List of benchmarks
-[SVCOMP](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks) - IF THE DIDN"T INSTANTLY COMPILE I REMOVED THEM SO MAYBE THERE ARE USEFUL ONES REMOVED LOL
+[SVCOMP](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks) - IF THE DIDN"T INSTANTLY COMPILE I REMOVED THEM SO MAYBE THERE ARE USEFUL ONES REMOVED LOL (regression folder seemed cool but a lot failed but there are like 9k files so some may be able to be taken)
