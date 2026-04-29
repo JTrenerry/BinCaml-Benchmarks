@@ -1,0 +1,21 @@
+format_version: '2.1'
+
+additional_information:
+  task_type: validation
+  verification:
+    - property_file: ../../properties/unreach-call.prp
+      expected_verdict: false
+
+
+input_files:
+  - '../trex02-2.c'
+  - 'trex02-2.1.witness-2.0.yml'
+
+properties:
+  - property_file: ../../properties/unreach-call.prp
+    expected_verdict: false
+
+options:
+  language: C
+  data_model: ILP32
+  witness_input_file: 'trex02-2.1.witness-2.0.yml'

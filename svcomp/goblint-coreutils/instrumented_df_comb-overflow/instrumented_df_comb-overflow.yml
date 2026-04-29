@@ -1,0 +1,10 @@
+format_version: '2.0'
+input_files: 'instrumented_df_comb-overflow.i'
+
+properties:
+  - property_file: ../properties/no-overflow.prp
+    expected_verdict: false # Confirmed bug: https://github.com/coreutils/gnulib/commit/831b84c59ef413c57a36b67344467d66a8a2ba70
+
+options:
+  language: C
+  data_model: LP64

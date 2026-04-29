@@ -1,0 +1,37 @@
+Contributed by: Moritz Buhl
+
+Taken from the OpenBSD 6.2 src checkout https://www.openbsd.org/
+Copyright and license are mentioned in each file of the source directory.
+
+In the original `if_etherip-unreach-call` task,
+IPv6 packets are not
+discarded properly because the return value of `ip6_etherip_input` is
+a wrong value at one location.
+
+Index: sys/net/if_etherip.c
+===================================================================
+RCS file: /cvs/src/sys/net/if_etherip.c,v
+retrieving revision 1.19
+diff -u -p -r1.19 if_etherip.c
+--- sys/net/if_etherip.c        6 Jun 2017 11:51:13 -0000       1.19
++++ sys/net/if_etherip.c        1 Feb 2018 19:19:14 -0000
+@@ -583,7 +583,7 @@ ip6_etherip_input(struct mbuf **mp, int 
+        if (!etherip_allow && (m->m_flags & (M_AUTH|M_CONF)) == 0) {
+                m_freem(m);
+                etheripstat.etherips_pdrops++;
+-               return IPPROTO_NONE;
++               return IPPROTO_DONE;
+        }
+ 
+        ip6 = mtod(m, const struct ip6_hdr *);
+
+File `sources/007_etherip.patch.sig` contains the original patch to this issue.
+It was obtained from
+https://www.openbsd.org/errata62.html and contains the necessary changes
+to remove the bug. The patch utility will warn on the
+"untrusted comment" in the first line but should then proceed. The file was
+left unmodified as available online.
+
+Originally these files are compiled with the unsupported OpenBSD 6.2 release
+and the systems compiler:
+OpenBSD clang version 4.0.0 (tags/RELEASE_400/final) (based on LLVM 4.0.0)

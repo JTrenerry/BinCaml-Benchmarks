@@ -1,0 +1,13 @@
+format_version: '2.0'
+
+# source_files: 'linux-hlist-lst-data.c'
+input_files: 'linux-hlist-lst-data.i'
+
+properties:
+  - property_file: ../properties/valid-memsafety.prp
+    expected_verdict: true
+  - property_file: ../properties/coverage-branches.prp
+
+options:
+  language: C
+  data_model: LP64

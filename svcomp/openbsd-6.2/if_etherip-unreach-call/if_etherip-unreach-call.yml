@@ -1,0 +1,20 @@
+format_version: '2.0'
+
+input_files: 'if_etherip-unreach-call.i'
+
+properties:
+  - property_file: ../properties/valid-memsafety.prp
+    expected_verdict: true
+  # ip6_etherip_input can mistakingly return IPPROTO_NONE (59) instead of
+  # the correct IPPROTO_DONE (257).
+  # This makes ip_deliver continue its loop instead of returning.
+  # In the next loop iteration, ip_deliver mistakingly calls rip_input, which is modelled
+  # as a reach_error().
+  - property_file: ../properties/unreach-call.prp
+    expected_verdict: false
+  - property_file: ../properties/coverage-branches.prp
+  - property_file: ../properties/coverage-error-call.prp
+
+options:
+  language: C
+  data_model: LP64
