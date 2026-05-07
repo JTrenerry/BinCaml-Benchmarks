@@ -1,0 +1,6 @@
+@@
+expression E;
+@@
+
+- __VERIFIER_assert(E)
++ __VERIFIER_assert(!(E))

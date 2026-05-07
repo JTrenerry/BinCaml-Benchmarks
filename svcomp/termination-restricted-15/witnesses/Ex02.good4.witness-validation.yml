@@ -1,0 +1,21 @@
+format_version: '2.1'
+
+additional_information:
+  task_type: validation
+  verification:
+    - property_file: ../../properties/termination.prp
+      expected_verdict: false
+
+
+input_files:
+  - '../Ex02.c'
+  - 'Ex02.good4.witness-2.1.yml'
+
+properties:
+  - property_file: ../../properties/termination.prp
+    expected_verdict: false
+
+options:
+  language: C
+  data_model: LP64
+  witness_input_file: 'Ex02.good4.witness-2.1.yml'

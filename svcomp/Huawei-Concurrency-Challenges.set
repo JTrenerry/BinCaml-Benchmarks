@@ -1,0 +1,3 @@
+# Contains Huawei's concurrency challenges.
+libvsync/*.yml
+pthread-complex/*.yml

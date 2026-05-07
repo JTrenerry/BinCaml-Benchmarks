@@ -1,0 +1,18 @@
+format_version: '2.0'
+
+input_files: 'if_etherip-invalid-deref.i'
+
+properties:
+  # ip6_etherip_input can mistakingly return IPPROTO_NONE (59) instead of
+  # the correct IPPROTO_DONE (257).
+  # This makes ip_deliver continue its loop instead of returning.
+  # In the next loop iteration, ip_deliver tries to dereference (*mp)->M_dat.MH.MH_pkthdr.len,
+  # but *mp was freed in ip6_etherip_input.
+  - property_file: ../properties/valid-memsafety.prp
+    expected_verdict: false
+    subproperty: valid-deref
+  - property_file: ../properties/coverage-branches.prp
+
+options:
+  language: C
+  data_model: LP64

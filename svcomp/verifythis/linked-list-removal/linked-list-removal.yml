@@ -1,0 +1,21 @@
+# This file is part of the SV-Benchmarks collection of verification tasks:
+# https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
+#
+# SPDX-FileCopyrightText: 2025 Marian Lingsch-Rosenfeld <marian.lingsch-rosenfeld@sosy.ifi.lmu.de>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+format_version: '2.0'
+
+input_files: 'linked-list-removal.c'
+
+properties:
+  - property_file: ../properties/valid-memsafety.prp
+    expected_verdict: true
+  - property_file: ../properties/valid-memcleanup.prp
+    expected_verdict: true
+  - property_file: ../properties/coverage-branches.prp
+
+options:
+  language: C
+  data_model: ILP32

@@ -1,0 +1,2 @@
+# Contains small example programs intended to check the correctness of verification tools
+nondet-memory-examples/*.yml

@@ -1,0 +1,2 @@
+validation-crafted/witnesses/*.witness-validation.yml
+termination-restricted-15/witnesses/*.witness-validation.yml

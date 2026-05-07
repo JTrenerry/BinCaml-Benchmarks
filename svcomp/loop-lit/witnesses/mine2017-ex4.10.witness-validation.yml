@@ -1,0 +1,21 @@
+format_version: '2.1'
+
+additional_information:
+  task_type: validation
+  verification:
+    - property_file: ../../properties/unreach-call.prp
+      expected_verdict: true
+
+
+input_files:
+  - '../mine2017-ex4.10.i'
+  - 'mine2017-ex4.10.witness-2.0.yml'
+
+properties:
+  - property_file: ../../properties/unreach-call.prp
+    expected_verdict: true
+
+options:
+  language: C
+  data_model: ILP32
+  witness_input_file: 'mine2017-ex4.10.witness-2.0.yml'

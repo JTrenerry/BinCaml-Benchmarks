@@ -1,0 +1,10 @@
+# Contains all LDV tasks containing regressions of device
+# drivers from the linux kernel. These are currently
+# not used in SV-COMP/Test-COMP on purpose, since they
+# contain many similar tasks, which likely do not add
+# much value to the other existing LDV tasks.
+#
+# For some background on these tasks and why they are
+# currently not included in SV-COMP in more detail, please see this
+# merge request: https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/merge_requests/1624
+regression/*.yml
