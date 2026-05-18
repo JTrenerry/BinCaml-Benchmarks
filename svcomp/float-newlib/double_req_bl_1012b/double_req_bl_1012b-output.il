@@ -17,7 +17,7 @@ var $V30: bv128;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPDiv_64 : (bv64, bv64, bv32) -> bv64;
+val $FPDiv_64 : bv64-> bv64-> bv32 -> bv64;
 
 prog entry @main_2548;
 

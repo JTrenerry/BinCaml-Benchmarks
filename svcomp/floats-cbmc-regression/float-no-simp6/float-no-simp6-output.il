@@ -16,10 +16,10 @@ var $V30: bv128;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPMul_32 : (bv32, bv32, bv32) -> bv32;
-declare-fun $FPCompare_32 : (bv32, bv32, bool, bv32) -> bv4;
-declare-fun $FPConvert_32_64 : (bv64, bv32, bv4) -> bv32;
-declare-fun $FPDiv_32 : (bv32, bv32, bv32) -> bv32;
+val $FPMul_32 : bv32-> bv32-> bv32 -> bv32;
+val $FPCompare_32 : bv32-> bv32-> bool-> bv32 -> bv4;
+val $FPConvert_32_64 : bv64-> bv32-> bv4 -> bv32;
+val $FPDiv_32 : bv32-> bv32-> bv32 -> bv32;
 
 prog entry @main_2476;
 

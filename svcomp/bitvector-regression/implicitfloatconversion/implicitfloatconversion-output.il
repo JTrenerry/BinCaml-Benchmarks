@@ -15,7 +15,7 @@ var $R31: bv64;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPToFixed_32_32 : (bv32, int, bool, bv32, int) -> bv32;
+val $FPToFixed_32_32 : bv32-> int-> bool-> bv32-> int -> bv32;
 
 prog entry @main_2252;
 

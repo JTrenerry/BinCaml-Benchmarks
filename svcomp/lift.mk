@@ -5,11 +5,12 @@ BINS := $(OCS:.oc=.out) $(OIS:.oi=.out)
 
 GTS := $(BINS:.out=.gts)
 GTIRBS := $(BINS:.out=.gtirb)
-ILS := $(BINS:.out=.il)
+ILS := $(BINS:.out=-output.il)
 
 DDISASM ?= ddisasm
 GTIRB_SEMANTICS ?= gtirb-semantics
-FRONT_END ?= basil
+FRONT_END ?= "basil"
+BINCAML ?= bincaml
 
 all: $(GTS) $(GTIRBS) $(ILS) $(BINS)
 
@@ -25,5 +26,7 @@ all: $(GTS) $(GTIRBS) $(ILS) $(BINS)
 %.gts: %.gtirb
 	$(GTIRB_SEMANTICS) $< $@
 
-%.il: %.gts
+%-output.il: %.gts FORCE
 	$(FRONT_END) -i $< --dump-il $*
+
+FORCE:

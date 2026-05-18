@@ -17,16 +17,16 @@ var $V30: bv128;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPConvert_64_32 : (bv32, bv32, bv4) -> bv64;
-declare-fun $FPMul_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPSub_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPAdd_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPConvert_32_64 : (bv64, bv32, bv4) -> bv32;
-declare-fun $FPDiv_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPMul_32 : (bv32, bv32, bv32) -> bv32;
-declare-fun $FPAdd_32 : (bv32, bv32, bv32) -> bv32;
-declare-fun $FPCompare_32 : (bv32, bv32, bool, bv32) -> bv4;
-declare-fun $FPSub_32 : (bv32, bv32, bv32) -> bv32;
+val $FPConvert_64_32 : bv32-> bv32-> bv4 -> bv64;
+val $FPMul_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPSub_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPAdd_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPConvert_32_64 : bv64-> bv32-> bv4 -> bv32;
+val $FPDiv_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPMul_32 : bv32-> bv32-> bv32 -> bv32;
+val $FPAdd_32 : bv32-> bv32-> bv32 -> bv32;
+val $FPCompare_32 : bv32-> bv32-> bool-> bv32 -> bv4;
+val $FPSub_32 : bv32-> bv32-> bv32 -> bv32;
 
 prog entry @main_3352;
 

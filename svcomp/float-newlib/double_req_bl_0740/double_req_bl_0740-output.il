@@ -17,11 +17,11 @@ var $V30: bv128;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPCompare_64 : (bv64, bv64, bool, bv32) -> bv4;
-declare-fun $FPAdd_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPSub_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPDiv_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPMul_64 : (bv64, bv64, bv32) -> bv64;
+val $FPCompare_64 : bv64-> bv64-> bool-> bv32 -> bv4;
+val $FPAdd_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPSub_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPDiv_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPMul_64 : bv64-> bv64-> bv32 -> bv64;
 
 prog entry @main_3624;
 

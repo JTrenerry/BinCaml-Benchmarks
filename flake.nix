@@ -34,7 +34,6 @@
           buildInputs =
             (with pkgs; [
               gnumake
-
               pkgsCross.aarch64-multiplatform.pkgsBuildHost.gcc
               pkgsCross.aarch64-multiplatform.pkgsBuildHost.clang
               pkgsCross.aarch64-multiplatform.pkgsBuildHost.llvmPackages.clang
