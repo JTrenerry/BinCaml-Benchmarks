@@ -26,7 +26,7 @@ all: $(GTS) $(GTIRBS) $(ILS) $(BINS)
 %.gts: %.gtirb
 	$(GTIRB_SEMANTICS) $< $@
 
-%-output.il: %.gts FORCE
-	$(FRONT_END) -i $< --dump-il $*
+# %-output.il: %.gts FORCE
+# 	$(FRONT_END) -i $< --dump-il $*
 
 FORCE:
