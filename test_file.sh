@@ -14,16 +14,23 @@ fi
 sexp="
 (load-il ${il_path})
 
+(run-transforms \"dynamic-single-assignment\")
 (run-transforms \"ssa\")
+
+;(run-transforms \"simplify\")
+
+(run-transforms \"dynamic-single-assignment\")
+(run-transforms \"ssa\")
+
 (run-transforms \"split-memory-encoding\")
 (run-transforms \"memory-specification\")
 
+(run-transforms \"dynamic-single-assignment\")
 (run-transforms \"ssa\")
 
-(run-transforms \"linear-const\")
-(run-transforms \"linear-copy\")
+(run-transforms \"simplify\")
 
-;(run-transforms \"dynamic-single-assignment\")
+;(run-transforms \"inter-function-summaries\")
 
 (dump-il \"${OUT_DIR}/out.il\")
 (dump-boogie \"${OUT_DIR}/out.bpl\")
@@ -47,5 +54,6 @@ if [ $ec != 0 ]; then
   exit $ec
 fi
 
-
-boogie "${OUT_DIR}/out.bpl" > ${OUT_DIR}/boogie_out 2>&1
+# echo "BOOGIE:"
+# time --output=${OUT_DIR}/time timeout --kill-after=15.0s 15.0s boogie "${OUT_DIR}/out.bpl" > ${OUT_DIR}/boogie_out 2>&1
+(time (timeout --kill-after=15.0s 15.0s boogie "${OUT_DIR}/out.bpl" > ${OUT_DIR}/boogie_log 2>&1)) 2> ${OUT_DIR}/boogie_time
