@@ -5,3 +5,6 @@
 *.out
 *.scala
 *.bpl
+.direnv
+.envrc
+test_out

@@ -29,10 +29,10 @@ var $V6: bv128;
 var $V7: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FixedToFP_64_32 : (bv32, int, bool, bv32, bv4) -> bv64;
-declare-fun $FPMul_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPAdd_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPCompare_64 : (bv64, bv64, bool, bv32) -> bv4;
+val $FixedToFP_64_32 : bv32-> int-> bool-> bv32-> bv4 -> bv64;
+val $FPMul_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPAdd_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPCompare_64 : bv64-> bv64-> bool-> bv32 -> bv4;
 
 prog entry @main_12872;
 

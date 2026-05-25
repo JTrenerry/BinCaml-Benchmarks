@@ -16,8 +16,8 @@ var $V30: bv128;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPSub_64 : (bv64, bv64, bv32) -> bv64;
-declare-fun $FPToFixed_32_64 : (bv64, int, bool, bv32, int) -> bv32;
+val $FPSub_64 : bv64-> bv64-> bv32 -> bv64;
+val $FPToFixed_32_64 : bv64-> int-> bool-> bv32-> int -> bv32;
 
 prog entry @main_2252;
 

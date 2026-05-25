@@ -16,8 +16,8 @@ var $V30: bv128;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPConvert_64_32 : (bv32, bv32, bv4) -> bv64;
-declare-fun $FPCompare_64 : (bv64, bv64, bool, bv32) -> bv4;
+val $FPConvert_64_32 : bv32-> bv32-> bv4 -> bv64;
+val $FPCompare_64 : bv64-> bv64-> bool-> bv32 -> bv4;
 
 prog entry @main_2252;
 

@@ -16,7 +16,7 @@ var $V0: bv128;
 var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
-declare-fun $FPSub_32 : (bv32, bv32, bv32) -> bv32;
+val $FPSub_32 : bv32-> bv32-> bv32 -> bv32;
 
 prog entry @main_2316;
 

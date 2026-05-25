@@ -36,24 +36,11 @@ sexp="
 (dump-boogie \"${OUT_DIR}/out.bpl\")
 "
 
-# sexp="
-# (load-il ${il_path})
-
-# (run-transforms \"ssa\")
-# (dump-il \"${OUT_DIR}/middle.il\")
-
-# (run-transforms \"ssa\")
-
-# (dump-il \"${OUT_DIR}/out.il\")
-# (dump-boogie \"${OUT_DIR}/out.bpl\")
-# "
-
 bincaml script - <<< $sexp
 ec=$?
 if [ $ec != 0 ]; then
   exit $ec
 fi
 
-# echo "BOOGIE:"
-# time --output=${OUT_DIR}/time timeout --kill-after=15.0s 15.0s boogie "${OUT_DIR}/out.bpl" > ${OUT_DIR}/boogie_out 2>&1
+echo "BOOGIE:"
 (time (timeout --kill-after=15.0s 15.0s boogie "${OUT_DIR}/out.bpl" > ${OUT_DIR}/boogie_log 2>&1)) 2> ${OUT_DIR}/boogie_time
