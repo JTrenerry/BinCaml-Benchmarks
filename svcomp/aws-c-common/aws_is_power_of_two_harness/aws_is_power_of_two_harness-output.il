@@ -11,32 +11,31 @@ var $R29: bv64;
 var $R3: bv64;
 var $R30: bv64;
 var $R31: bv64;
-var $V31: bv128;
 var $VF: bv1;
 var $ZF: bv1;
 
-prog entry @main_3048;
+prog entry @main_1920;
 
-proc @main_3048 () -> ()
-  { .name = "main"; .address = 0xbe8; .returnBlock = "main_basil_return_1" }
+proc @main_1920 () -> ()
+  { .name = "main"; .address = 0x780; .returnBlock = "main_basil_return_1" }
 [
-  block %main_entry {.address = 0xbe8; .originalLabel = "3ua99DRqRUWmWfBnn27rvQ=="} [
-    var Cse0__5_148: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "3048_0" };
-    store le $stack Cse0__5_148:bv64 $R29:bv64 64 { .label = "3048_1" };
-    store le $stack bvadd(Cse0__5_148:bv64, 0x8:bv64) $R30:bv64 64 { .label = "3048_2" };
-    $R31: bv64 := Cse0__5_148:bv64 { .label = "3048_3" };
-    $R29: bv64 := $R31:bv64 { .label = "3052_0" };
-    $R30: bv64 := 0xbf4:bv64 { .label = "3056_0" };
-    call @aws_is_power_of_two_harness_2948 ();
-    goto(%main_3);
+  block %main_entry {.address = 0x780; .originalLabel = "QIZPtsaTQjiAsr+paN6ljw=="} [
+    var Cse0__5_20: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "1920_0" };
+    store le $stack Cse0__5_20:bv64 $R29:bv64 64 { .label = "1920_1" };
+    store le $stack bvadd(Cse0__5_20:bv64, 0x8:bv64) $R30:bv64 64 { .label = "1920_2" };
+    $R31: bv64 := Cse0__5_20:bv64 { .label = "1920_3" };
+    $R29: bv64 := $R31:bv64 { .label = "1924_0" };
+    $R30: bv64 := 0x78c:bv64 { .label = "1928_0" };
+    call @aws_is_power_of_two_harness_2688 ();
+    goto(%main_5);
   ];
-  block %main_3 {.address = 0xbf4; .originalLabel = "0XSFt12bSWuE6R2sIiOWGg=="} [
-    $R0: bv64 := 0x0:bv64 { .label = "3060_0" };
-    var Exp16__5_146: bv64 := load le $stack $R31:bv64 64 { .label = "3064_0$0" };
-    var Exp18__5_147: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "3064_1$0" };
-    $R29: bv64 := Exp16__5_146:bv64 { .label = "3064_2" };
-    $R30: bv64 := Exp18__5_147:bv64 { .label = "3064_3" };
-    $R31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "3064_4" };
+  block %main_5 {.address = 0x78c; .originalLabel = "vIU4IpBoQ7iHGSsu/mSe3g=="} [
+    $R0: bv64 := 0x0:bv64 { .label = "1932_0" };
+    var Exp16__5_21: bv64 := load le $stack $R31:bv64 64 { .label = "1936_0$0" };
+    var Exp18__5_22: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "1936_1$0" };
+    $R29: bv64 := Exp16__5_21:bv64 { .label = "1936_2" };
+    $R30: bv64 := Exp18__5_22:bv64 { .label = "1936_3" };
+    $R31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "1936_4" };
     goto(%main_basil_return_1);
   ];
   block %main_basil_return_1 [
@@ -45,21 +44,21 @@ proc @main_3048 () -> ()
 ];
 
 
-proc @__VERIFIER_nondet_ulong_3112 () -> ()
-  { .name = "__VERIFIER_nondet_ulong"; .address = 0xc28; .returnBlock = "__VERIFIER_nondet_ulong_basil_return_1" }
+proc @__VERIFIER_nondet_ulong_2816 () -> ()
+  { .name = "__VERIFIER_nondet_ulong"; .address = 0xb00; .returnBlock = "__VERIFIER_nondet_ulong_basil_return_1" }
 [
-  block %__VERIFIER_nondet_ulong_entry {.address = 0xc28; .originalLabel = "XksSkefUR7WMqtL63Xts5g=="} [
-    var Cse0__5_44: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "3112_0" };
-    store le $stack Cse0__5_44:bv64 $R29:bv64 64 { .label = "3112_1" };
-    store le $stack bvadd(Cse0__5_44:bv64, 0x8:bv64) $R30:bv64 64 { .label = "3112_2" };
-    $R31: bv64 := Cse0__5_44:bv64 { .label = "3112_3" };
-    $R29: bv64 := $R31:bv64 { .label = "3116_0" };
-    $R0: bv64 := 0x0:bv64 { .label = "3120_0" };
-    var Exp16__5_45: bv64 := load le $stack $R31:bv64 64 { .label = "3124_0$0" };
-    var Exp18__5_46: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "3124_1$0" };
-    $R29: bv64 := Exp16__5_45:bv64 { .label = "3124_2" };
-    $R30: bv64 := Exp18__5_46:bv64 { .label = "3124_3" };
-    $R31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "3124_4" };
+  block %__VERIFIER_nondet_ulong_entry {.address = 0xb00; .originalLabel = "c27yTvSCQyG/atsZxyjg3Q=="} [
+    var Cse0__5_29: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "2816_0" };
+    store le $stack Cse0__5_29:bv64 $R29:bv64 64 { .label = "2816_1" };
+    store le $stack bvadd(Cse0__5_29:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2816_2" };
+    $R31: bv64 := Cse0__5_29:bv64 { .label = "2816_3" };
+    $R0: bv64 := 0x0:bv64 { .label = "2820_0" };
+    $R29: bv64 := $R31:bv64 { .label = "2824_0" };
+    var Exp16__5_30: bv64 := load le $stack $R31:bv64 64 { .label = "2828_0$0" };
+    var Exp18__5_31: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "2828_1$0" };
+    $R29: bv64 := Exp16__5_30:bv64 { .label = "2828_2" };
+    $R30: bv64 := Exp18__5_31:bv64 { .label = "2828_3" };
+    $R31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "2828_4" };
     goto(%__VERIFIER_nondet_ulong_basil_return_1);
   ];
   block %__VERIFIER_nondet_ulong_basil_return_1 [
@@ -68,39 +67,35 @@ proc @__VERIFIER_nondet_ulong_3112 () -> ()
 ];
 
 
-proc @abort () -> ()
-  { .name = "abort" };
-
-
 proc @__assert_fail () -> ()
   { .name = "__assert_fail" };
 
 
-proc @reach_error_2212 () -> ()
-  { .name = "reach_error"; .address = 0x8a4; .returnBlock = "reach_error_basil_return_1" }
+proc @reach_error_2304 () -> ()
+  { .name = "reach_error"; .address = 0x900; .returnBlock = "reach_error_basil_return_1" }
 [
-  block %reach_error_entry {.address = 0x8a4; .originalLabel = "NFpTM/+QS/2EqY+rHy0RBg=="} [
-    var R30_begin_reach_error_2212: bv64 := $R30:bv64;
-    var Cse0__5_70: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "2212_0" };
-    store le $stack Cse0__5_70:bv64 $R29:bv64 64 { .label = "2212_1" };
-    store le $stack bvadd(Cse0__5_70:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2212_2" };
-    $R31: bv64 := Cse0__5_70:bv64 { .label = "2212_3" };
-    $R29: bv64 := $R31:bv64 { .label = "2216_0" };
-    $R0: bv64 := 0x0:bv64 { .label = "2220_0" };
-    $R3: bv64 := bvadd($R0:bv64, 0xcc0:bv64) { .label = "2224_0" };
-    $R2: bv64 := 0xd0:bv64 { .label = "2228_0" };
-    $R0: bv64 := 0x0:bv64 { .label = "2232_0" };
-    $R1: bv64 := bvadd($R0:bv64, 0xcd0:bv64) { .label = "2236_0" };
-    $R0: bv64 := 0x0:bv64 { .label = "2240_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0xcf0:bv64) { .label = "2244_0" };
-    $R30: bv64 := 0x8cc:bv64 { .label = "2248_0" };
-    assert eq($R30:bv64, R30_begin_reach_error_2212:bv64) { .comment = "R30 = R30_in" };
-    goto(%FUN_760_entry_5);
+  block %reach_error_entry {.address = 0x900; .originalLabel = "NFpTM/+QS/2EqY+rHy0RBg=="} [
+    var R30_begin_reach_error_2304: bv64 := $R30:bv64;
+    var Cse0__5_108: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "2304_0" };
+    store le $stack Cse0__5_108:bv64 $R29:bv64 64 { .label = "2304_1" };
+    store le $stack bvadd(Cse0__5_108:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2304_2" };
+    $R31: bv64 := Cse0__5_108:bv64 { .label = "2304_3" };
+    $R3: bv64 := 0x0:bv64 { .label = "2308_0" };
+    $R1: bv64 := 0x0:bv64 { .label = "2312_0" };
+    $R29: bv64 := $R31:bv64 { .label = "2316_0" };
+    $R0: bv64 := 0x0:bv64 { .label = "2320_0" };
+    $R3: bv64 := bvadd($R3:bv64, 0xbd8:bv64) { .label = "2324_0" };
+    $R1: bv64 := bvadd($R1:bv64, 0xbe8:bv64) { .label = "2328_0" };
+    $R0: bv64 := bvadd($R0:bv64, 0xc08:bv64) { .label = "2332_0" };
+    $R2: bv64 := 0xd0:bv64 { .label = "2336_0" };
+    $R30: bv64 := 0x928:bv64 { .label = "2340_0" };
+    assert eq($R30:bv64, R30_begin_reach_error_2304:bv64) { .comment = "R30 = R30_in" };
+    goto(%FUN_760_entry_9);
   ];
   block %_inlineret_3 {.originalLabel = "NFpTM/+QS/2EqY+rHy0RBg=="} [
     goto(%reach_error_basil_return_1);
   ];
-  block %FUN_760_entry_5 {.address = 0x760} [
+  block %FUN_760_entry_9 {.address = 0x760} [
     var R30_begin_FUN_760_1888_1: bv64 := $R30:bv64;
     $R16: bv64 := 0x20000:bv64 { .label = "1888_0" };
     var Exp14__5_2: bv64 := load le $mem bvadd($R16:bv64, 0x20:bv64) 64 { .label = "1892_0$0" };
@@ -108,9 +103,9 @@ proc @reach_error_2212 () -> ()
     $R16: bv64 := bvadd($R16:bv64, 0x20:bv64) { .label = "1896_0" };
     assert eq($R30:bv64, R30_begin_FUN_760_1888_1:bv64) { .comment = "R30 = R30_in" };
     call @__assert_fail () { .label = "1900_2" };
-    goto(%FUN_760_basil_return_1_6);
+    goto(%FUN_760_basil_return_1_10);
   ];
-  block %FUN_760_basil_return_1_6 [
+  block %FUN_760_basil_return_1_10 [
     goto(%_inlineret_3);
   ];
   block %reach_error_basil_return_1 [
@@ -119,1000 +114,96 @@ proc @reach_error_2212 () -> ()
 ];
 
 
-proc @__VERIFIER_assert_2304 () -> ()
-  { .name = "__VERIFIER_assert"; .address = 0x900; .returnBlock = "__VERIFIER_assert_basil_return_1" }
+proc @aws_is_power_of_two_harness_2688 () -> ()
+  { .name = "aws_is_power_of_two_harness"; .address = 0xa80; .returnBlock = "aws_is_power_of_two_harness_basil_return_1" }
 [
-  block %__VERIFIER_assert_entry {.address = 0x900; .originalLabel = "bi+fGelgRGyjvc7mxRfNSA=="} [
-    var R30_begin___VERIFIER_assert_2304: bv64 := $R30:bv64;
-    var Cse0__5_6: bv64 := bvadd($R31:bv64, 0xffffffffffffffe0:bv64) { .label = "2304_0" };
-    store le $stack Cse0__5_6:bv64 $R29:bv64 64 { .label = "2304_1" };
-    store le $stack bvadd(Cse0__5_6:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2304_2" };
-    $R31: bv64 := Cse0__5_6:bv64 { .label = "2304_3" };
-    $R29: bv64 := $R31:bv64 { .label = "2308_0" };
-    store le $stack bvadd($R31:bv64, 0x1f:bv64) extract(8, 0, $R0:bv64) 8 { .label = "2312_0" };
-    var Exp11__5_7: bv8 := load le $stack bvadd($R31:bv64, 0x1f:bv64) 8 { .label = "2316_0$0" };
-    $R0: bv64 := zero_extend(32, zero_extend(24, Exp11__5_7:bv8)) { .label = "2316_1" };
-    $R0: bv64 := zero_extend(32, bvxor(extract(32, 0, $R0:bv64), 0x1:bv32)) { .label = "2320_0" };
-    $R0: bv64 := zero_extend(32, zero_extend(24, extract(8, 0, $R0:bv64))) { .label = "2324_0" };
-    $R0: bv64 := zero_extend(32, zero_extend(31, extract(1, 0, $R0:bv64))) { .label = "2328_0" };
-    $VF: bv1 := 0x0:bv1 { .label = "2332_0" };
-    $CF: bv1 := 0x1:bv1 { .label = "2332_1" };
-    $ZF: bv1 := bvcomp(extract(32, 0, $R0:bv64), 0x0:bv32) { .label = "2332_2" };
-    $NF: bv1 := extract(32, 31, $R0:bv64) { .label = "2332_3" };
-    goto(%__VERIFIER_assert_7, %__VERIFIER_assert_11);
+  block %aws_is_power_of_two_harness_entry {.address = 0xa80; .originalLabel = "bqmOpLgYSuS0GLoW5Yzxzg=="} [
+    var R30_begin_aws_is_power_of_two_harness_2688: bv64 := $R30:bv64;
+    var Cse0__5_50: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "2688_0" };
+    store le $stack Cse0__5_50:bv64 $R29:bv64 64 { .label = "2688_1" };
+    store le $stack bvadd(Cse0__5_50:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2688_2" };
+    $R31: bv64 := Cse0__5_50:bv64 { .label = "2688_3" };
+    $R29: bv64 := $R31:bv64 { .label = "2692_0" };
+    $R30: bv64 := 0xa8c:bv64 { .label = "2696_0" };
+    call @__VERIFIER_nondet_ulong_2816 ();
+    goto(%aws_is_power_of_two_harness_31);
   ];
-  block %__VERIFIER_assert_5 {.address = 0x92c; .originalLabel = "JU9QUSBKRk6ulUUNbBLGCA=="} [
-    goto(%__VERIFIER_assert_basil_return_1);
-  ];
-  block %__VERIFIER_assert_7 [
-    guard eq($ZF:bv1, 0x1:bv1);
-    var Exp16__5_4: bv64 := load le $stack $R31:bv64 64 { .label = "2352_0$0" };
-    var Exp18__5_5: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "2352_1$0" };
-    $R29: bv64 := Exp16__5_4:bv64 { .label = "2352_2" };
-    $R30: bv64 := Exp18__5_5:bv64 { .label = "2352_3" };
-    $R31: bv64 := bvadd($R31:bv64, 0x20:bv64) { .label = "2352_4" };
-    goto(%__VERIFIER_assert_5);
-  ];
-  block %__VERIFIER_assert_11 [
-    guard boolnot(eq($ZF:bv1, 0x1:bv1));
-    $R30: bv64 := 0x928:bv64 { .label = "2340_0" };
-    assert eq($R30:bv64, R30_begin___VERIFIER_assert_2304:bv64) { .comment = "R30 = R30_in" };
-    call @reach_error_2212 () { .label = "2340_2" };
-    goto(%__VERIFIER_assert_basil_return_1);
-  ];
-  block %_inlineret_3 {.originalLabel = "0MpOQhtsSwKDtv0Q66GV9g=="} [
-    goto(%__VERIFIER_assert_basil_return_1);
-  ];
-  block %FUN_750_entry_7 {.address = 0x750} [
-    var R30_begin_FUN_750_1872_1: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "1872_0" };
-    var Exp14__5_2: bv64 := load le $mem bvadd($R16:bv64, 0x18:bv64) 64 { .label = "1876_0$0" };
-    $R17: bv64 := Exp14__5_2:bv64 { .label = "1876_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x18:bv64) { .label = "1880_0" };
-    assert eq($R30:bv64, R30_begin_FUN_750_1872_1:bv64) { .comment = "R30 = R30_in" };
-    call @abort () { .label = "1884_2" };
-    goto(%FUN_750_basil_return_1_8);
-  ];
-  block %FUN_750_basil_return_1_8 [
-    goto(%_inlineret_3);
-  ];
-  block %__VERIFIER_assert_basil_return_1 [
-    return ();
-  ]
-];
-
-
-proc @aws_is_power_of_two_2872 () -> ()
-  { .name = "aws_is_power_of_two"; .address = 0xb38; .returnBlock = "aws_is_power_of_two_basil_return_1" }
-[
-  block %aws_is_power_of_two_entry {.address = 0xb38; .originalLabel = "DWCFV0TBTDuqwztJGkgH4w=="} [
-    var Cse0__5_86: bv64 := bvadd($R31:bv64, 0xffffffffffffffe0:bv64) { .label = "2872_0" };
-    store le $stack Cse0__5_86:bv64 $R29:bv64 64 { .label = "2872_1" };
-    store le $stack bvadd(Cse0__5_86:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2872_2" };
-    $R31: bv64 := Cse0__5_86:bv64 { .label = "2872_3" };
-    $R29: bv64 := $R31:bv64 { .label = "2876_0" };
-    store le $stack bvadd($R31:bv64, 0x18:bv64) $R0:bv64 64 { .label = "2880_0" };
-    var Exp14__5_87: bv64 := load le $stack bvadd($R31:bv64, 0x18:bv64) 64 { .label = "2884_0$0" };
-    $R0: bv64 := Exp14__5_87:bv64 { .label = "2884_1" };
-    $VF: bv1 := 0x0:bv1 { .label = "2888_0" };
-    $CF: bv1 := 0x1:bv1 { .label = "2888_1" };
-    $ZF: bv1 := bvcomp($R0:bv64, 0x0:bv64) { .label = "2888_2" };
-    $NF: bv1 := extract(64, 63, $R0:bv64) { .label = "2888_3" };
-    goto(%aws_is_power_of_two_7, %aws_is_power_of_two_17);
-  ];
-  block %aws_is_power_of_two_3 {.address = 0xb74; .originalLabel = "Cc0Tgg4TTsW6UHbVQ2WldQ=="} [
-    $R0: bv64 := zero_extend(32, zero_extend(31, extract(1, 0, $R0:bv64))) { .label = "2932_0" };
-    $R0: bv64 := zero_extend(32, zero_extend(24, extract(8, 0, $R0:bv64))) { .label = "2936_0" };
-    var Exp16__5_88: bv64 := load le $stack $R31:bv64 64 { .label = "2940_0$0" };
-    var Exp18__5_89: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "2940_1$0" };
-    $R29: bv64 := Exp16__5_88:bv64 { .label = "2940_2" };
-    $R30: bv64 := Exp18__5_89:bv64 { .label = "2940_3" };
-    $R31: bv64 := bvadd($R31:bv64, 0x20:bv64) { .label = "2940_4" };
-    goto(%aws_is_power_of_two_basil_return_1);
-  ];
-  block %aws_is_power_of_two_5 {.address = 0xb70; .originalLabel = "metj1KCrQGaHnXIZHf6s4g=="} [
-    $R0: bv64 := 0x0:bv64 { .label = "2928_0" };
-    goto(%aws_is_power_of_two_3);
-  ];
-  block %aws_is_power_of_two_7 [
-    guard eq($ZF:bv1, 0x1:bv1);
-    goto(%aws_is_power_of_two_5);
-  ];
-  block %aws_is_power_of_two_9 [
-    guard boolnot(eq($ZF:bv1, 0x1:bv1));
-    goto(%aws_is_power_of_two_5);
-  ];
-  block %aws_is_power_of_two_11 {.address = 0xb68; .originalLabel = "ALJcVvfyQ22jkKF5nYWk4A=="} [
-    goto(%aws_is_power_of_two_3);
-  ];
-  block %aws_is_power_of_two_13 [
-    guard boolnot(boolnot(eq($ZF:bv1, 0x1:bv1)));
-    $R0: bv64 := 0x1:bv64 { .label = "2920_0" };
-    goto(%aws_is_power_of_two_11);
-  ];
-  block %aws_is_power_of_two_15 {.address = 0xb50; .originalLabel = "WzLT9H3VRN6e3d3/4iQt2Q=="} [
-    goto(%aws_is_power_of_two_9, %aws_is_power_of_two_13);
-  ];
-  block %aws_is_power_of_two_17 [
-    guard boolnot(eq($ZF:bv1, 0x1:bv1));
-    var Exp14__5_84: bv64 := load le $stack bvadd($R31:bv64, 0x18:bv64) 64 { .label = "2896_0$0" };
-    $R0: bv64 := Exp14__5_84:bv64 { .label = "2896_1" };
-    $R1: bv64 := bvadd($R0:bv64, 0xffffffffffffffff:bv64) { .label = "2900_0" };
-    var Exp14__5_85: bv64 := load le $stack bvadd($R31:bv64, 0x18:bv64) 64 { .label = "2904_0$0" };
-    $R0: bv64 := Exp14__5_85:bv64 { .label = "2904_1" };
-    $R0: bv64 := bvand($R1:bv64, $R0:bv64) { .label = "2908_0" };
-    $VF: bv1 := 0x0:bv1 { .label = "2912_0" };
-    $CF: bv1 := 0x1:bv1 { .label = "2912_1" };
-    $ZF: bv1 := bvcomp($R0:bv64, 0x0:bv64) { .label = "2912_2" };
-    $NF: bv1 := extract(64, 63, $R0:bv64) { .label = "2912_3" };
-    goto(%aws_is_power_of_two_15);
-  ];
-  block %aws_is_power_of_two_basil_return_1 [
-    return ();
-  ]
-];
-
-
-proc @aws_is_power_of_two_harness_2948 () -> ()
-  { .name = "aws_is_power_of_two_harness"; .address = 0xb84; .returnBlock = "aws_is_power_of_two_harness_basil_return_1" }
-[
-  block %aws_is_power_of_two_harness_entry {.address = 0xb84; .originalLabel = "3McmxVZcTnSXZuXQ4AXH/Q=="} [
-    var Cse0__5_28: bv64 := bvadd($R31:bv64, 0xffffffffffffffe0:bv64) { .label = "2948_0" };
-    store le $stack Cse0__5_28:bv64 $R29:bv64 64 { .label = "2948_1" };
-    store le $stack bvadd(Cse0__5_28:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2948_2" };
-    $R31: bv64 := Cse0__5_28:bv64 { .label = "2948_3" };
-    $R29: bv64 := $R31:bv64 { .label = "2952_0" };
-    $R30: bv64 := 0xb90:bv64 { .label = "2956_0" };
-    call @__VERIFIER_nondet_ulong_3112 ();
-    goto(%aws_is_power_of_two_harness_403);
-  ];
-  block %aws_is_power_of_two_harness_3 {.address = 0xbdc; .originalLabel = "w7LraNkrR0arnAA1/i3ubw=="} [
-    var Exp16__5_26: bv64 := load le $stack $R31:bv64 64 { .label = "3040_0$0" };
-    var Exp18__5_27: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "3040_1$0" };
-    $R29: bv64 := Exp16__5_26:bv64 { .label = "3040_2" };
-    $R30: bv64 := Exp18__5_27:bv64 { .label = "3040_3" };
-    $R31: bv64 := bvadd($R31:bv64, 0x20:bv64) { .label = "3040_4" };
+  block %aws_is_power_of_two_harness_5 {.address = 0xab0; .originalLabel = "SUWidZj6SiqiK2kFV95ecw=="} [
+    var Exp16__5_48: bv64 := load le $stack $R31:bv64 64 { .label = "2736_0$0" };
+    var Exp18__5_49: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "2736_1$0" };
+    $R29: bv64 := Exp16__5_48:bv64 { .label = "2736_2" };
+    $R30: bv64 := Exp18__5_49:bv64 { .label = "2736_3" };
+    $R31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "2736_4" };
     goto(%aws_is_power_of_two_harness_basil_return_1);
   ];
-  block %aws_is_power_of_two_harness_5 [
-    $R0: bv64 := zero_extend(32, zero_extend(24, extract(8, 0, $R0:bv64))) { .label = "3028_0" };
-    $R30: bv64 := 0xbdc:bv64 { .label = "3032_0" };
-    call @__VERIFIER_assert_2304 ();
-    goto(%aws_is_power_of_two_harness_3);
-  ];
   block %aws_is_power_of_two_harness_7 [
-    guard boolnot(eq($ZF:bv1, 0x1:bv1));
-    $R0: bv64 := 0x0:bv64 { .label = "3024_0" };
-    goto(%aws_is_power_of_two_harness_5);
-  ];
-  block %aws_is_power_of_two_harness_9 [
-    guard boolnot(boolnot(eq($ZF:bv1, 0x1:bv1)));
-    $R0: bv64 := 0x1:bv64 { .label = "3024_0" };
+    guard eq($R0:bv64, 0x0:bv64);
     goto(%aws_is_power_of_two_harness_5);
   ];
   block %aws_is_power_of_two_harness_11 [
-    $R1: bv64 := zero_extend(32, zero_extend(24, extract(8, 0, $R1:bv64))) { .label = "3016_0" };
-    var Cse2__5_24: bv32 := bvnot(extract(32, 0, $R1:bv64)) { .label = "3020_0" };
-    var Cse0__5_25: bv32 := bvadd(extract(32, 0, $R0:bv64), bvnot(extract(32, 0, $R1:bv64))) { .label = "3020_1" };
-    $VF: bv1 := bvnot(bvcomp(sign_extend(32, bvadd(Cse0__5_25:bv32, 0x1:bv32)), bvadd(bvadd(sign_extend(32, extract(32, 0, $R0:bv64)), sign_extend(32, Cse2__5_24:bv32)), 0x1:bv64))) { .label = "3020_2" };
-    $CF: bv1 := bvnot(bvcomp(zero_extend(32, bvadd(Cse0__5_25:bv32, 0x1:bv32)), bvadd(bvadd(zero_extend(32, extract(32, 0, $R0:bv64)), zero_extend(32, Cse2__5_24:bv32)), 0x1:bv64))) { .label = "3020_3" };
-    $ZF: bv1 := bvcomp(bvadd(Cse0__5_25:bv32, 0x1:bv32), 0x0:bv32) { .label = "3020_4" };
-    $NF: bv1 := extract(32, 31, bvadd(Cse0__5_25:bv32, 0x1:bv32)) { .label = "3020_5" };
-    goto(%aws_is_power_of_two_harness_7, %aws_is_power_of_two_harness_9);
+    guard boolnot(eq($ZF:bv1, 0x1:bv1));
+    $R30: bv64 := 0xabc:bv64 { .label = "2744_0" };
+    assert eq($R30:bv64, R30_begin_aws_is_power_of_two_harness_2688:bv64) { .comment = "R30 = R30_in" };
+    call @reach_error_2304 () { .label = "2744_2" };
+    goto(%aws_is_power_of_two_harness_basil_return_1);
   ];
   block %aws_is_power_of_two_harness_13 [
-    guard boolnot(eq($ZF:bv1, 0x1:bv1));
-    $R1: bv64 := 0x0:bv64 { .label = "3012_0" };
-    goto(%aws_is_power_of_two_harness_11);
+    guard boolnot(boolnot(eq($ZF:bv1, 0x1:bv1)));
+    goto(%aws_is_power_of_two_harness_5);
   ];
   block %aws_is_power_of_two_harness_15 [
-    guard boolnot(boolnot(eq($ZF:bv1, 0x1:bv1)));
-    $R1: bv64 := 0x1:bv64 { .label = "3012_0" };
-    goto(%aws_is_power_of_two_harness_11);
+    var Cse2__5_46: bv32 := bvnot(extract(32, 0, $R0:bv64)) { .label = "2728_0" };
+    var Cse0__5_47: bv32 := bvadd(extract(32, 0, $R2:bv64), bvnot(extract(32, 0, $R0:bv64))) { .label = "2728_1" };
+    $VF: bv1 := bvnot(bvcomp(sign_extend(32, bvadd(Cse0__5_47:bv32, 0x1:bv32)), bvadd(bvadd(sign_extend(32, extract(32, 0, $R2:bv64)), sign_extend(32, Cse2__5_46:bv32)), 0x1:bv64))) { .label = "2728_2" };
+    $CF: bv1 := bvnot(bvcomp(zero_extend(32, bvadd(Cse0__5_47:bv32, 0x1:bv32)), bvadd(bvadd(zero_extend(32, extract(32, 0, $R2:bv64)), zero_extend(32, Cse2__5_46:bv32)), 0x1:bv64))) { .label = "2728_3" };
+    $ZF: bv1 := bvcomp(bvadd(Cse0__5_47:bv32, 0x1:bv32), 0x0:bv32) { .label = "2728_4" };
+    $NF: bv1 := extract(32, 31, bvadd(Cse0__5_47:bv32, 0x1:bv32)) { .label = "2728_5" };
+    goto(%aws_is_power_of_two_harness_11, %aws_is_power_of_two_harness_13);
   ];
   block %aws_is_power_of_two_harness_17 [
-    $V31: bv128 := zero_extend(64, bvconcat(zero_extend(4, result__5_7_20:bv4), bvconcat(zero_extend(4, result__5_6_19:bv4), bvconcat(zero_extend(4, result__5_5_18:bv4), bvconcat(zero_extend(4, result__5_4_17:bv4), bvconcat(zero_extend(4, result__5_3_16:bv4), bvconcat(zero_extend(4, result__5_2_15:bv4), bvconcat(zero_extend(4, result__5_1_14:bv4), zero_extend(4, result__5_13:bv4))))))))) { .label = "2984_72" };
-    $V31: bv128 := zero_extend(120, bvadd(bvadd(bvadd(extract(8, 0, $V31:bv128), extract(16, 8, $V31:bv128)), bvadd(extract(24, 16, $V31:bv128), extract(32, 24, $V31:bv128))), bvadd(bvadd(extract(40, 32, $V31:bv128), extract(48, 40, $V31:bv128)), bvadd(extract(56, 48, $V31:bv128), extract(64, 56, $V31:bv128))))) { .label = "2988_0" };
-    $R0: bv64 := zero_extend(32, extract(32, 0, $V31:bv128)) { .label = "2992_0" };
-    store le $stack bvadd($R31:bv64, 0x10:bv64) extract(32, 0, $R0:bv64) 32 { .label = "2996_0" };
-    var Exp11__5_21: bv8 := load le $stack bvadd($R31:bv64, 0x17:bv64) 8 { .label = "3000_0$0" };
-    $R0: bv64 := zero_extend(32, zero_extend(24, Exp11__5_21:bv8)) { .label = "3000_1" };
-    var Exp14__5_22: bv32 := load le $stack bvadd($R31:bv64, 0x10:bv64) 32 { .label = "3004_0$0" };
-    $R1: bv64 := zero_extend(32, Exp14__5_22:bv32) { .label = "3004_1" };
-    var Cse0__5_23: bv32 := bvadd(extract(32, 0, $R1:bv64), 0xffffffff:bv32) { .label = "3008_0" };
-    $VF: bv1 := bvnot(bvcomp(sign_extend(32, Cse0__5_23:bv32), bvadd(sign_extend(32, extract(32, 0, $R1:bv64)), 0xffffffffffffffff:bv64))) { .label = "3008_1" };
-    $CF: bv1 := bvnot(bvcomp(zero_extend(32, Cse0__5_23:bv32), bvadd(zero_extend(32, extract(32, 0, $R1:bv64)), 0xffffffff:bv64))) { .label = "3008_2" };
-    $ZF: bv1 := bvcomp(Cse0__5_23:bv32, 0x0:bv32) { .label = "3008_3" };
-    $NF: bv1 := extract(32, 31, Cse0__5_23:bv32) { .label = "3008_4" };
-    goto(%aws_is_power_of_two_harness_13, %aws_is_power_of_two_harness_15);
+    guard boolnot(eq($ZF:bv1, 0x1:bv1));
+    $R0: bv64 := 0x0:bv64 { .label = "2724_0" };
+    goto(%aws_is_power_of_two_harness_15);
   ];
   block %aws_is_power_of_two_harness_19 [
-    guard eq(extract(64, 63, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := bvadd(result__5_7_20:bv4, 0x1:bv4) { .label = "2984_71" };
-    goto(%aws_is_power_of_two_harness_17);
+    guard boolnot(boolnot(eq($ZF:bv1, 0x1:bv1)));
+    $R0: bv64 := 0x1:bv64 { .label = "2724_0" };
+    goto(%aws_is_power_of_two_harness_15);
   ];
   block %aws_is_power_of_two_harness_21 [
-    guard boolnot(eq(extract(64, 63, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_17);
+    $VF: bv1 := 0x0:bv1 { .label = "2720_0" };
+    $CF: bv1 := 0x0:bv1 { .label = "2720_1" };
+    $ZF: bv1 := bvcomp(bvand($R1:bv64, $R0:bv64), 0x0:bv64) { .label = "2720_2" };
+    $NF: bv1 := bvand(extract(64, 63, $R1:bv64), extract(64, 63, $R0:bv64)) { .label = "2720_3" };
+    goto(%aws_is_power_of_two_harness_17, %aws_is_power_of_two_harness_19);
   ];
   block %aws_is_power_of_two_harness_23 [
-    goto(%aws_is_power_of_two_harness_19, %aws_is_power_of_two_harness_21);
+    guard boolnot(booland(eq($CF:bv1, 0x1:bv1), eq($ZF:bv1, 0x0:bv1)));
+    $R2: bv64 := 0x0:bv64 { .label = "2716_0" };
+    goto(%aws_is_power_of_two_harness_21);
   ];
   block %aws_is_power_of_two_harness_25 [
-    guard eq(extract(63, 62, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := bvadd(result__5_7_20:bv4, 0x1:bv4) { .label = "2984_70" };
-    goto(%aws_is_power_of_two_harness_23);
+    guard boolnot(boolnot(booland(eq($CF:bv1, 0x1:bv1), eq($ZF:bv1, 0x0:bv1))));
+    $R2: bv64 := 0x1:bv64 { .label = "2716_0" };
+    goto(%aws_is_power_of_two_harness_21);
   ];
-  block %aws_is_power_of_two_harness_27 [
-    guard boolnot(eq(extract(63, 62, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_23);
+  block %aws_is_power_of_two_harness_27 {.address = 0xa90; .originalLabel = "Z34EBZxxREeqo89kog4x+w=="} [
+    goto(%aws_is_power_of_two_harness_23, %aws_is_power_of_two_harness_25);
   ];
   block %aws_is_power_of_two_harness_29 [
-    goto(%aws_is_power_of_two_harness_25, %aws_is_power_of_two_harness_27);
-  ];
-  block %aws_is_power_of_two_harness_31 [
-    guard eq(extract(62, 61, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := bvadd(result__5_7_20:bv4, 0x1:bv4) { .label = "2984_69" };
-    goto(%aws_is_power_of_two_harness_29);
-  ];
-  block %aws_is_power_of_two_harness_33 [
-    guard boolnot(eq(extract(62, 61, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_29);
-  ];
-  block %aws_is_power_of_two_harness_35 [
-    goto(%aws_is_power_of_two_harness_31, %aws_is_power_of_two_harness_33);
-  ];
-  block %aws_is_power_of_two_harness_37 [
-    guard eq(extract(61, 60, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := bvadd(result__5_7_20:bv4, 0x1:bv4) { .label = "2984_68" };
-    goto(%aws_is_power_of_two_harness_35);
-  ];
-  block %aws_is_power_of_two_harness_39 [
-    guard boolnot(eq(extract(61, 60, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_35);
-  ];
-  block %aws_is_power_of_two_harness_41 [
-    goto(%aws_is_power_of_two_harness_37, %aws_is_power_of_two_harness_39);
-  ];
-  block %aws_is_power_of_two_harness_43 [
-    guard eq(extract(60, 59, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := bvadd(result__5_7_20:bv4, 0x1:bv4) { .label = "2984_67" };
-    goto(%aws_is_power_of_two_harness_41);
-  ];
-  block %aws_is_power_of_two_harness_45 [
-    guard boolnot(eq(extract(60, 59, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_41);
-  ];
-  block %aws_is_power_of_two_harness_47 [
-    goto(%aws_is_power_of_two_harness_43, %aws_is_power_of_two_harness_45);
-  ];
-  block %aws_is_power_of_two_harness_49 [
-    guard eq(extract(59, 58, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := bvadd(result__5_7_20:bv4, 0x1:bv4) { .label = "2984_66" };
-    goto(%aws_is_power_of_two_harness_47);
-  ];
-  block %aws_is_power_of_two_harness_51 [
-    guard boolnot(eq(extract(59, 58, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_47);
-  ];
-  block %aws_is_power_of_two_harness_53 [
-    goto(%aws_is_power_of_two_harness_49, %aws_is_power_of_two_harness_51);
-  ];
-  block %aws_is_power_of_two_harness_55 [
-    guard eq(extract(58, 57, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := bvadd(result__5_7_20:bv4, 0x1:bv4) { .label = "2984_65" };
-    goto(%aws_is_power_of_two_harness_53);
-  ];
-  block %aws_is_power_of_two_harness_57 [
-    guard boolnot(eq(extract(58, 57, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_53);
-  ];
-  block %aws_is_power_of_two_harness_59 [
-    goto(%aws_is_power_of_two_harness_55, %aws_is_power_of_two_harness_57);
-  ];
-  block %aws_is_power_of_two_harness_61 [
-    guard eq(extract(57, 56, $V31:bv128), 0x1:bv1);
-    var result__5_7_20: bv4 := 0x1:bv4 { .label = "2984_64" };
-    goto(%aws_is_power_of_two_harness_59);
-  ];
-  block %aws_is_power_of_two_harness_63 [
-    guard boolnot(eq(extract(57, 56, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_59);
-  ];
-  block %aws_is_power_of_two_harness_65 [
-    var result__5_7_20: bv4 := 0x0:bv4 { .label = "2984_63" };
-    goto(%aws_is_power_of_two_harness_61, %aws_is_power_of_two_harness_63);
-  ];
-  block %aws_is_power_of_two_harness_67 [
-    guard eq(extract(56, 55, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := bvadd(result__5_6_19:bv4, 0x1:bv4) { .label = "2984_62" };
-    goto(%aws_is_power_of_two_harness_65);
-  ];
-  block %aws_is_power_of_two_harness_69 [
-    guard boolnot(eq(extract(56, 55, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_65);
-  ];
-  block %aws_is_power_of_two_harness_71 [
-    goto(%aws_is_power_of_two_harness_67, %aws_is_power_of_two_harness_69);
-  ];
-  block %aws_is_power_of_two_harness_73 [
-    guard eq(extract(55, 54, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := bvadd(result__5_6_19:bv4, 0x1:bv4) { .label = "2984_61" };
-    goto(%aws_is_power_of_two_harness_71);
-  ];
-  block %aws_is_power_of_two_harness_75 [
-    guard boolnot(eq(extract(55, 54, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_71);
-  ];
-  block %aws_is_power_of_two_harness_77 [
-    goto(%aws_is_power_of_two_harness_73, %aws_is_power_of_two_harness_75);
-  ];
-  block %aws_is_power_of_two_harness_79 [
-    guard eq(extract(54, 53, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := bvadd(result__5_6_19:bv4, 0x1:bv4) { .label = "2984_60" };
-    goto(%aws_is_power_of_two_harness_77);
-  ];
-  block %aws_is_power_of_two_harness_81 [
-    guard boolnot(eq(extract(54, 53, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_77);
-  ];
-  block %aws_is_power_of_two_harness_83 [
-    goto(%aws_is_power_of_two_harness_79, %aws_is_power_of_two_harness_81);
-  ];
-  block %aws_is_power_of_two_harness_85 [
-    guard eq(extract(53, 52, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := bvadd(result__5_6_19:bv4, 0x1:bv4) { .label = "2984_59" };
-    goto(%aws_is_power_of_two_harness_83);
-  ];
-  block %aws_is_power_of_two_harness_87 [
-    guard boolnot(eq(extract(53, 52, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_83);
-  ];
-  block %aws_is_power_of_two_harness_89 [
-    goto(%aws_is_power_of_two_harness_85, %aws_is_power_of_two_harness_87);
-  ];
-  block %aws_is_power_of_two_harness_91 [
-    guard eq(extract(52, 51, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := bvadd(result__5_6_19:bv4, 0x1:bv4) { .label = "2984_58" };
-    goto(%aws_is_power_of_two_harness_89);
-  ];
-  block %aws_is_power_of_two_harness_93 [
-    guard boolnot(eq(extract(52, 51, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_89);
-  ];
-  block %aws_is_power_of_two_harness_95 [
-    goto(%aws_is_power_of_two_harness_91, %aws_is_power_of_two_harness_93);
-  ];
-  block %aws_is_power_of_two_harness_97 [
-    guard eq(extract(51, 50, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := bvadd(result__5_6_19:bv4, 0x1:bv4) { .label = "2984_57" };
-    goto(%aws_is_power_of_two_harness_95);
-  ];
-  block %aws_is_power_of_two_harness_99 [
-    guard boolnot(eq(extract(51, 50, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_95);
-  ];
-  block %aws_is_power_of_two_harness_101 [
-    goto(%aws_is_power_of_two_harness_97, %aws_is_power_of_two_harness_99);
-  ];
-  block %aws_is_power_of_two_harness_103 [
-    guard eq(extract(50, 49, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := bvadd(result__5_6_19:bv4, 0x1:bv4) { .label = "2984_56" };
-    goto(%aws_is_power_of_two_harness_101);
-  ];
-  block %aws_is_power_of_two_harness_105 [
-    guard boolnot(eq(extract(50, 49, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_101);
-  ];
-  block %aws_is_power_of_two_harness_107 [
-    goto(%aws_is_power_of_two_harness_103, %aws_is_power_of_two_harness_105);
-  ];
-  block %aws_is_power_of_two_harness_109 [
-    guard eq(extract(49, 48, $V31:bv128), 0x1:bv1);
-    var result__5_6_19: bv4 := 0x1:bv4 { .label = "2984_55" };
-    goto(%aws_is_power_of_two_harness_107);
-  ];
-  block %aws_is_power_of_two_harness_111 [
-    guard boolnot(eq(extract(49, 48, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_107);
-  ];
-  block %aws_is_power_of_two_harness_113 [
-    var result__5_6_19: bv4 := 0x0:bv4 { .label = "2984_54" };
-    goto(%aws_is_power_of_two_harness_109, %aws_is_power_of_two_harness_111);
-  ];
-  block %aws_is_power_of_two_harness_115 [
-    guard eq(extract(48, 47, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := bvadd(result__5_5_18:bv4, 0x1:bv4) { .label = "2984_53" };
-    goto(%aws_is_power_of_two_harness_113);
-  ];
-  block %aws_is_power_of_two_harness_117 [
-    guard boolnot(eq(extract(48, 47, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_113);
-  ];
-  block %aws_is_power_of_two_harness_119 [
-    goto(%aws_is_power_of_two_harness_115, %aws_is_power_of_two_harness_117);
-  ];
-  block %aws_is_power_of_two_harness_121 [
-    guard eq(extract(47, 46, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := bvadd(result__5_5_18:bv4, 0x1:bv4) { .label = "2984_52" };
-    goto(%aws_is_power_of_two_harness_119);
-  ];
-  block %aws_is_power_of_two_harness_123 [
-    guard boolnot(eq(extract(47, 46, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_119);
-  ];
-  block %aws_is_power_of_two_harness_125 [
-    goto(%aws_is_power_of_two_harness_121, %aws_is_power_of_two_harness_123);
-  ];
-  block %aws_is_power_of_two_harness_127 [
-    guard eq(extract(46, 45, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := bvadd(result__5_5_18:bv4, 0x1:bv4) { .label = "2984_51" };
-    goto(%aws_is_power_of_two_harness_125);
-  ];
-  block %aws_is_power_of_two_harness_129 [
-    guard boolnot(eq(extract(46, 45, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_125);
-  ];
-  block %aws_is_power_of_two_harness_131 [
-    goto(%aws_is_power_of_two_harness_127, %aws_is_power_of_two_harness_129);
-  ];
-  block %aws_is_power_of_two_harness_133 [
-    guard eq(extract(45, 44, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := bvadd(result__5_5_18:bv4, 0x1:bv4) { .label = "2984_50" };
-    goto(%aws_is_power_of_two_harness_131);
-  ];
-  block %aws_is_power_of_two_harness_135 [
-    guard boolnot(eq(extract(45, 44, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_131);
-  ];
-  block %aws_is_power_of_two_harness_137 [
-    goto(%aws_is_power_of_two_harness_133, %aws_is_power_of_two_harness_135);
-  ];
-  block %aws_is_power_of_two_harness_139 [
-    guard eq(extract(44, 43, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := bvadd(result__5_5_18:bv4, 0x1:bv4) { .label = "2984_49" };
-    goto(%aws_is_power_of_two_harness_137);
-  ];
-  block %aws_is_power_of_two_harness_141 [
-    guard boolnot(eq(extract(44, 43, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_137);
-  ];
-  block %aws_is_power_of_two_harness_143 [
-    goto(%aws_is_power_of_two_harness_139, %aws_is_power_of_two_harness_141);
-  ];
-  block %aws_is_power_of_two_harness_145 [
-    guard eq(extract(43, 42, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := bvadd(result__5_5_18:bv4, 0x1:bv4) { .label = "2984_48" };
-    goto(%aws_is_power_of_two_harness_143);
-  ];
-  block %aws_is_power_of_two_harness_147 [
-    guard boolnot(eq(extract(43, 42, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_143);
-  ];
-  block %aws_is_power_of_two_harness_149 [
-    goto(%aws_is_power_of_two_harness_145, %aws_is_power_of_two_harness_147);
-  ];
-  block %aws_is_power_of_two_harness_151 [
-    guard eq(extract(42, 41, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := bvadd(result__5_5_18:bv4, 0x1:bv4) { .label = "2984_47" };
-    goto(%aws_is_power_of_two_harness_149);
-  ];
-  block %aws_is_power_of_two_harness_153 [
-    guard boolnot(eq(extract(42, 41, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_149);
-  ];
-  block %aws_is_power_of_two_harness_155 [
-    goto(%aws_is_power_of_two_harness_151, %aws_is_power_of_two_harness_153);
-  ];
-  block %aws_is_power_of_two_harness_157 [
-    guard eq(extract(41, 40, $V31:bv128), 0x1:bv1);
-    var result__5_5_18: bv4 := 0x1:bv4 { .label = "2984_46" };
-    goto(%aws_is_power_of_two_harness_155);
-  ];
-  block %aws_is_power_of_two_harness_159 [
-    guard boolnot(eq(extract(41, 40, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_155);
-  ];
-  block %aws_is_power_of_two_harness_161 [
-    var result__5_5_18: bv4 := 0x0:bv4 { .label = "2984_45" };
-    goto(%aws_is_power_of_two_harness_157, %aws_is_power_of_two_harness_159);
-  ];
-  block %aws_is_power_of_two_harness_163 [
-    guard eq(extract(40, 39, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := bvadd(result__5_4_17:bv4, 0x1:bv4) { .label = "2984_44" };
-    goto(%aws_is_power_of_two_harness_161);
-  ];
-  block %aws_is_power_of_two_harness_165 [
-    guard boolnot(eq(extract(40, 39, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_161);
-  ];
-  block %aws_is_power_of_two_harness_167 [
-    goto(%aws_is_power_of_two_harness_163, %aws_is_power_of_two_harness_165);
-  ];
-  block %aws_is_power_of_two_harness_169 [
-    guard eq(extract(39, 38, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := bvadd(result__5_4_17:bv4, 0x1:bv4) { .label = "2984_43" };
-    goto(%aws_is_power_of_two_harness_167);
-  ];
-  block %aws_is_power_of_two_harness_171 [
-    guard boolnot(eq(extract(39, 38, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_167);
-  ];
-  block %aws_is_power_of_two_harness_173 [
-    goto(%aws_is_power_of_two_harness_169, %aws_is_power_of_two_harness_171);
-  ];
-  block %aws_is_power_of_two_harness_175 [
-    guard eq(extract(38, 37, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := bvadd(result__5_4_17:bv4, 0x1:bv4) { .label = "2984_42" };
-    goto(%aws_is_power_of_two_harness_173);
-  ];
-  block %aws_is_power_of_two_harness_177 [
-    guard boolnot(eq(extract(38, 37, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_173);
-  ];
-  block %aws_is_power_of_two_harness_179 [
-    goto(%aws_is_power_of_two_harness_175, %aws_is_power_of_two_harness_177);
-  ];
-  block %aws_is_power_of_two_harness_181 [
-    guard eq(extract(37, 36, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := bvadd(result__5_4_17:bv4, 0x1:bv4) { .label = "2984_41" };
-    goto(%aws_is_power_of_two_harness_179);
-  ];
-  block %aws_is_power_of_two_harness_183 [
-    guard boolnot(eq(extract(37, 36, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_179);
-  ];
-  block %aws_is_power_of_two_harness_185 [
-    goto(%aws_is_power_of_two_harness_181, %aws_is_power_of_two_harness_183);
-  ];
-  block %aws_is_power_of_two_harness_187 [
-    guard eq(extract(36, 35, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := bvadd(result__5_4_17:bv4, 0x1:bv4) { .label = "2984_40" };
-    goto(%aws_is_power_of_two_harness_185);
-  ];
-  block %aws_is_power_of_two_harness_189 [
-    guard boolnot(eq(extract(36, 35, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_185);
-  ];
-  block %aws_is_power_of_two_harness_191 [
-    goto(%aws_is_power_of_two_harness_187, %aws_is_power_of_two_harness_189);
-  ];
-  block %aws_is_power_of_two_harness_193 [
-    guard eq(extract(35, 34, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := bvadd(result__5_4_17:bv4, 0x1:bv4) { .label = "2984_39" };
-    goto(%aws_is_power_of_two_harness_191);
-  ];
-  block %aws_is_power_of_two_harness_195 [
-    guard boolnot(eq(extract(35, 34, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_191);
-  ];
-  block %aws_is_power_of_two_harness_197 [
-    goto(%aws_is_power_of_two_harness_193, %aws_is_power_of_two_harness_195);
-  ];
-  block %aws_is_power_of_two_harness_199 [
-    guard eq(extract(34, 33, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := bvadd(result__5_4_17:bv4, 0x1:bv4) { .label = "2984_38" };
-    goto(%aws_is_power_of_two_harness_197);
-  ];
-  block %aws_is_power_of_two_harness_201 [
-    guard boolnot(eq(extract(34, 33, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_197);
-  ];
-  block %aws_is_power_of_two_harness_203 [
-    goto(%aws_is_power_of_two_harness_199, %aws_is_power_of_two_harness_201);
-  ];
-  block %aws_is_power_of_two_harness_205 [
-    guard eq(extract(33, 32, $V31:bv128), 0x1:bv1);
-    var result__5_4_17: bv4 := 0x1:bv4 { .label = "2984_37" };
-    goto(%aws_is_power_of_two_harness_203);
-  ];
-  block %aws_is_power_of_two_harness_207 [
-    guard boolnot(eq(extract(33, 32, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_203);
-  ];
-  block %aws_is_power_of_two_harness_209 [
-    var result__5_4_17: bv4 := 0x0:bv4 { .label = "2984_36" };
-    goto(%aws_is_power_of_two_harness_205, %aws_is_power_of_two_harness_207);
-  ];
-  block %aws_is_power_of_two_harness_211 [
-    guard eq(extract(32, 31, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := bvadd(result__5_3_16:bv4, 0x1:bv4) { .label = "2984_35" };
-    goto(%aws_is_power_of_two_harness_209);
-  ];
-  block %aws_is_power_of_two_harness_213 [
-    guard boolnot(eq(extract(32, 31, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_209);
-  ];
-  block %aws_is_power_of_two_harness_215 [
-    goto(%aws_is_power_of_two_harness_211, %aws_is_power_of_two_harness_213);
-  ];
-  block %aws_is_power_of_two_harness_217 [
-    guard eq(extract(31, 30, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := bvadd(result__5_3_16:bv4, 0x1:bv4) { .label = "2984_34" };
-    goto(%aws_is_power_of_two_harness_215);
-  ];
-  block %aws_is_power_of_two_harness_219 [
-    guard boolnot(eq(extract(31, 30, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_215);
-  ];
-  block %aws_is_power_of_two_harness_221 [
-    goto(%aws_is_power_of_two_harness_217, %aws_is_power_of_two_harness_219);
-  ];
-  block %aws_is_power_of_two_harness_223 [
-    guard eq(extract(30, 29, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := bvadd(result__5_3_16:bv4, 0x1:bv4) { .label = "2984_33" };
-    goto(%aws_is_power_of_two_harness_221);
-  ];
-  block %aws_is_power_of_two_harness_225 [
-    guard boolnot(eq(extract(30, 29, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_221);
-  ];
-  block %aws_is_power_of_two_harness_227 [
-    goto(%aws_is_power_of_two_harness_223, %aws_is_power_of_two_harness_225);
-  ];
-  block %aws_is_power_of_two_harness_229 [
-    guard eq(extract(29, 28, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := bvadd(result__5_3_16:bv4, 0x1:bv4) { .label = "2984_32" };
-    goto(%aws_is_power_of_two_harness_227);
-  ];
-  block %aws_is_power_of_two_harness_231 [
-    guard boolnot(eq(extract(29, 28, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_227);
-  ];
-  block %aws_is_power_of_two_harness_233 [
-    goto(%aws_is_power_of_two_harness_229, %aws_is_power_of_two_harness_231);
-  ];
-  block %aws_is_power_of_two_harness_235 [
-    guard eq(extract(28, 27, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := bvadd(result__5_3_16:bv4, 0x1:bv4) { .label = "2984_31" };
-    goto(%aws_is_power_of_two_harness_233);
-  ];
-  block %aws_is_power_of_two_harness_237 [
-    guard boolnot(eq(extract(28, 27, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_233);
-  ];
-  block %aws_is_power_of_two_harness_239 [
-    goto(%aws_is_power_of_two_harness_235, %aws_is_power_of_two_harness_237);
-  ];
-  block %aws_is_power_of_two_harness_241 [
-    guard eq(extract(27, 26, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := bvadd(result__5_3_16:bv4, 0x1:bv4) { .label = "2984_30" };
-    goto(%aws_is_power_of_two_harness_239);
-  ];
-  block %aws_is_power_of_two_harness_243 [
-    guard boolnot(eq(extract(27, 26, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_239);
-  ];
-  block %aws_is_power_of_two_harness_245 [
-    goto(%aws_is_power_of_two_harness_241, %aws_is_power_of_two_harness_243);
-  ];
-  block %aws_is_power_of_two_harness_247 [
-    guard eq(extract(26, 25, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := bvadd(result__5_3_16:bv4, 0x1:bv4) { .label = "2984_29" };
-    goto(%aws_is_power_of_two_harness_245);
-  ];
-  block %aws_is_power_of_two_harness_249 [
-    guard boolnot(eq(extract(26, 25, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_245);
-  ];
-  block %aws_is_power_of_two_harness_251 [
-    goto(%aws_is_power_of_two_harness_247, %aws_is_power_of_two_harness_249);
-  ];
-  block %aws_is_power_of_two_harness_253 [
-    guard eq(extract(25, 24, $V31:bv128), 0x1:bv1);
-    var result__5_3_16: bv4 := 0x1:bv4 { .label = "2984_28" };
-    goto(%aws_is_power_of_two_harness_251);
-  ];
-  block %aws_is_power_of_two_harness_255 [
-    guard boolnot(eq(extract(25, 24, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_251);
-  ];
-  block %aws_is_power_of_two_harness_257 [
-    var result__5_3_16: bv4 := 0x0:bv4 { .label = "2984_27" };
-    goto(%aws_is_power_of_two_harness_253, %aws_is_power_of_two_harness_255);
-  ];
-  block %aws_is_power_of_two_harness_259 [
-    guard eq(extract(24, 23, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := bvadd(result__5_2_15:bv4, 0x1:bv4) { .label = "2984_26" };
-    goto(%aws_is_power_of_two_harness_257);
-  ];
-  block %aws_is_power_of_two_harness_261 [
-    guard boolnot(eq(extract(24, 23, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_257);
-  ];
-  block %aws_is_power_of_two_harness_263 [
-    goto(%aws_is_power_of_two_harness_259, %aws_is_power_of_two_harness_261);
-  ];
-  block %aws_is_power_of_two_harness_265 [
-    guard eq(extract(23, 22, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := bvadd(result__5_2_15:bv4, 0x1:bv4) { .label = "2984_25" };
-    goto(%aws_is_power_of_two_harness_263);
-  ];
-  block %aws_is_power_of_two_harness_267 [
-    guard boolnot(eq(extract(23, 22, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_263);
-  ];
-  block %aws_is_power_of_two_harness_269 [
-    goto(%aws_is_power_of_two_harness_265, %aws_is_power_of_two_harness_267);
-  ];
-  block %aws_is_power_of_two_harness_271 [
-    guard eq(extract(22, 21, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := bvadd(result__5_2_15:bv4, 0x1:bv4) { .label = "2984_24" };
-    goto(%aws_is_power_of_two_harness_269);
-  ];
-  block %aws_is_power_of_two_harness_273 [
-    guard boolnot(eq(extract(22, 21, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_269);
-  ];
-  block %aws_is_power_of_two_harness_275 [
-    goto(%aws_is_power_of_two_harness_271, %aws_is_power_of_two_harness_273);
-  ];
-  block %aws_is_power_of_two_harness_277 [
-    guard eq(extract(21, 20, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := bvadd(result__5_2_15:bv4, 0x1:bv4) { .label = "2984_23" };
-    goto(%aws_is_power_of_two_harness_275);
-  ];
-  block %aws_is_power_of_two_harness_279 [
-    guard boolnot(eq(extract(21, 20, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_275);
-  ];
-  block %aws_is_power_of_two_harness_281 [
-    goto(%aws_is_power_of_two_harness_277, %aws_is_power_of_two_harness_279);
-  ];
-  block %aws_is_power_of_two_harness_283 [
-    guard eq(extract(20, 19, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := bvadd(result__5_2_15:bv4, 0x1:bv4) { .label = "2984_22" };
-    goto(%aws_is_power_of_two_harness_281);
-  ];
-  block %aws_is_power_of_two_harness_285 [
-    guard boolnot(eq(extract(20, 19, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_281);
-  ];
-  block %aws_is_power_of_two_harness_287 [
-    goto(%aws_is_power_of_two_harness_283, %aws_is_power_of_two_harness_285);
-  ];
-  block %aws_is_power_of_two_harness_289 [
-    guard eq(extract(19, 18, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := bvadd(result__5_2_15:bv4, 0x1:bv4) { .label = "2984_21" };
-    goto(%aws_is_power_of_two_harness_287);
-  ];
-  block %aws_is_power_of_two_harness_291 [
-    guard boolnot(eq(extract(19, 18, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_287);
-  ];
-  block %aws_is_power_of_two_harness_293 [
-    goto(%aws_is_power_of_two_harness_289, %aws_is_power_of_two_harness_291);
-  ];
-  block %aws_is_power_of_two_harness_295 [
-    guard eq(extract(18, 17, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := bvadd(result__5_2_15:bv4, 0x1:bv4) { .label = "2984_20" };
-    goto(%aws_is_power_of_two_harness_293);
-  ];
-  block %aws_is_power_of_two_harness_297 [
-    guard boolnot(eq(extract(18, 17, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_293);
-  ];
-  block %aws_is_power_of_two_harness_299 [
-    goto(%aws_is_power_of_two_harness_295, %aws_is_power_of_two_harness_297);
-  ];
-  block %aws_is_power_of_two_harness_301 [
-    guard eq(extract(17, 16, $V31:bv128), 0x1:bv1);
-    var result__5_2_15: bv4 := 0x1:bv4 { .label = "2984_19" };
-    goto(%aws_is_power_of_two_harness_299);
-  ];
-  block %aws_is_power_of_two_harness_303 [
-    guard boolnot(eq(extract(17, 16, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_299);
-  ];
-  block %aws_is_power_of_two_harness_305 [
-    var result__5_2_15: bv4 := 0x0:bv4 { .label = "2984_18" };
-    goto(%aws_is_power_of_two_harness_301, %aws_is_power_of_two_harness_303);
-  ];
-  block %aws_is_power_of_two_harness_307 [
-    guard eq(extract(16, 15, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := bvadd(result__5_1_14:bv4, 0x1:bv4) { .label = "2984_17" };
-    goto(%aws_is_power_of_two_harness_305);
-  ];
-  block %aws_is_power_of_two_harness_309 [
-    guard boolnot(eq(extract(16, 15, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_305);
-  ];
-  block %aws_is_power_of_two_harness_311 [
-    goto(%aws_is_power_of_two_harness_307, %aws_is_power_of_two_harness_309);
-  ];
-  block %aws_is_power_of_two_harness_313 [
-    guard eq(extract(15, 14, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := bvadd(result__5_1_14:bv4, 0x1:bv4) { .label = "2984_16" };
-    goto(%aws_is_power_of_two_harness_311);
-  ];
-  block %aws_is_power_of_two_harness_315 [
-    guard boolnot(eq(extract(15, 14, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_311);
-  ];
-  block %aws_is_power_of_two_harness_317 [
-    goto(%aws_is_power_of_two_harness_313, %aws_is_power_of_two_harness_315);
-  ];
-  block %aws_is_power_of_two_harness_319 [
-    guard eq(extract(14, 13, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := bvadd(result__5_1_14:bv4, 0x1:bv4) { .label = "2984_15" };
-    goto(%aws_is_power_of_two_harness_317);
-  ];
-  block %aws_is_power_of_two_harness_321 [
-    guard boolnot(eq(extract(14, 13, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_317);
-  ];
-  block %aws_is_power_of_two_harness_323 [
-    goto(%aws_is_power_of_two_harness_319, %aws_is_power_of_two_harness_321);
-  ];
-  block %aws_is_power_of_two_harness_325 [
-    guard eq(extract(13, 12, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := bvadd(result__5_1_14:bv4, 0x1:bv4) { .label = "2984_14" };
-    goto(%aws_is_power_of_two_harness_323);
-  ];
-  block %aws_is_power_of_two_harness_327 [
-    guard boolnot(eq(extract(13, 12, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_323);
-  ];
-  block %aws_is_power_of_two_harness_329 [
-    goto(%aws_is_power_of_two_harness_325, %aws_is_power_of_two_harness_327);
-  ];
-  block %aws_is_power_of_two_harness_331 [
-    guard eq(extract(12, 11, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := bvadd(result__5_1_14:bv4, 0x1:bv4) { .label = "2984_13" };
-    goto(%aws_is_power_of_two_harness_329);
-  ];
-  block %aws_is_power_of_two_harness_333 [
-    guard boolnot(eq(extract(12, 11, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_329);
-  ];
-  block %aws_is_power_of_two_harness_335 [
-    goto(%aws_is_power_of_two_harness_331, %aws_is_power_of_two_harness_333);
-  ];
-  block %aws_is_power_of_two_harness_337 [
-    guard eq(extract(11, 10, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := bvadd(result__5_1_14:bv4, 0x1:bv4) { .label = "2984_12" };
-    goto(%aws_is_power_of_two_harness_335);
-  ];
-  block %aws_is_power_of_two_harness_339 [
-    guard boolnot(eq(extract(11, 10, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_335);
-  ];
-  block %aws_is_power_of_two_harness_341 [
-    goto(%aws_is_power_of_two_harness_337, %aws_is_power_of_two_harness_339);
-  ];
-  block %aws_is_power_of_two_harness_343 [
-    guard eq(extract(10, 9, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := bvadd(result__5_1_14:bv4, 0x1:bv4) { .label = "2984_11" };
-    goto(%aws_is_power_of_two_harness_341);
-  ];
-  block %aws_is_power_of_two_harness_345 [
-    guard boolnot(eq(extract(10, 9, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_341);
-  ];
-  block %aws_is_power_of_two_harness_347 [
-    goto(%aws_is_power_of_two_harness_343, %aws_is_power_of_two_harness_345);
-  ];
-  block %aws_is_power_of_two_harness_349 [
-    guard eq(extract(9, 8, $V31:bv128), 0x1:bv1);
-    var result__5_1_14: bv4 := 0x1:bv4 { .label = "2984_10" };
-    goto(%aws_is_power_of_two_harness_347);
-  ];
-  block %aws_is_power_of_two_harness_351 [
-    guard boolnot(eq(extract(9, 8, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_347);
-  ];
-  block %aws_is_power_of_two_harness_353 [
-    var result__5_1_14: bv4 := 0x0:bv4 { .label = "2984_9" };
-    goto(%aws_is_power_of_two_harness_349, %aws_is_power_of_two_harness_351);
-  ];
-  block %aws_is_power_of_two_harness_355 [
-    guard eq(extract(8, 7, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := bvadd(result__5_13:bv4, 0x1:bv4) { .label = "2984_8" };
-    goto(%aws_is_power_of_two_harness_353);
-  ];
-  block %aws_is_power_of_two_harness_357 [
-    guard boolnot(eq(extract(8, 7, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_353);
-  ];
-  block %aws_is_power_of_two_harness_359 [
-    goto(%aws_is_power_of_two_harness_355, %aws_is_power_of_two_harness_357);
-  ];
-  block %aws_is_power_of_two_harness_361 [
-    guard eq(extract(7, 6, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := bvadd(result__5_13:bv4, 0x1:bv4) { .label = "2984_7" };
-    goto(%aws_is_power_of_two_harness_359);
-  ];
-  block %aws_is_power_of_two_harness_363 [
-    guard boolnot(eq(extract(7, 6, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_359);
-  ];
-  block %aws_is_power_of_two_harness_365 [
-    goto(%aws_is_power_of_two_harness_361, %aws_is_power_of_two_harness_363);
-  ];
-  block %aws_is_power_of_two_harness_367 [
-    guard eq(extract(6, 5, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := bvadd(result__5_13:bv4, 0x1:bv4) { .label = "2984_6" };
-    goto(%aws_is_power_of_two_harness_365);
-  ];
-  block %aws_is_power_of_two_harness_369 [
-    guard boolnot(eq(extract(6, 5, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_365);
-  ];
-  block %aws_is_power_of_two_harness_371 [
-    goto(%aws_is_power_of_two_harness_367, %aws_is_power_of_two_harness_369);
-  ];
-  block %aws_is_power_of_two_harness_373 [
-    guard eq(extract(5, 4, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := bvadd(result__5_13:bv4, 0x1:bv4) { .label = "2984_5" };
-    goto(%aws_is_power_of_two_harness_371);
-  ];
-  block %aws_is_power_of_two_harness_375 [
-    guard boolnot(eq(extract(5, 4, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_371);
-  ];
-  block %aws_is_power_of_two_harness_377 [
-    goto(%aws_is_power_of_two_harness_373, %aws_is_power_of_two_harness_375);
-  ];
-  block %aws_is_power_of_two_harness_379 [
-    guard eq(extract(4, 3, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := bvadd(result__5_13:bv4, 0x1:bv4) { .label = "2984_4" };
-    goto(%aws_is_power_of_two_harness_377);
-  ];
-  block %aws_is_power_of_two_harness_381 [
-    guard boolnot(eq(extract(4, 3, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_377);
-  ];
-  block %aws_is_power_of_two_harness_383 [
-    goto(%aws_is_power_of_two_harness_379, %aws_is_power_of_two_harness_381);
-  ];
-  block %aws_is_power_of_two_harness_385 [
-    guard eq(extract(3, 2, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := bvadd(result__5_13:bv4, 0x1:bv4) { .label = "2984_3" };
-    goto(%aws_is_power_of_two_harness_383);
-  ];
-  block %aws_is_power_of_two_harness_387 [
-    guard boolnot(eq(extract(3, 2, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_383);
-  ];
-  block %aws_is_power_of_two_harness_389 [
-    goto(%aws_is_power_of_two_harness_385, %aws_is_power_of_two_harness_387);
-  ];
-  block %aws_is_power_of_two_harness_391 [
-    guard eq(extract(2, 1, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := bvadd(result__5_13:bv4, 0x1:bv4) { .label = "2984_2" };
-    goto(%aws_is_power_of_two_harness_389);
-  ];
-  block %aws_is_power_of_two_harness_393 [
-    guard boolnot(eq(extract(2, 1, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_389);
-  ];
-  block %aws_is_power_of_two_harness_395 [
-    goto(%aws_is_power_of_two_harness_391, %aws_is_power_of_two_harness_393);
-  ];
-  block %aws_is_power_of_two_harness_397 [
-    guard eq(extract(1, 0, $V31:bv128), 0x1:bv1);
-    var result__5_13: bv4 := 0x1:bv4 { .label = "2984_1" };
-    goto(%aws_is_power_of_two_harness_395);
-  ];
-  block %aws_is_power_of_two_harness_399 [
-    guard boolnot(eq(extract(1, 0, $V31:bv128), 0x1:bv1));
-    goto(%aws_is_power_of_two_harness_395);
-  ];
-  block %aws_is_power_of_two_harness_401 {.address = 0xb9c; .originalLabel = "T2ma9mkORsq3SnGzcZiJEQ=="} [
-    store le $stack bvadd($R31:bv64, 0x17:bv64) extract(8, 0, $R0:bv64) 8 { .label = "2972_0" };
-    var Exp14__5_12: bv64 := load le $stack bvadd($R31:bv64, 0x18:bv64) 64 { .label = "2976_0$0" };
-    $R0: bv64 := Exp14__5_12:bv64 { .label = "2976_1" };
-    $V31: bv128 := zero_extend(64, $R0:bv64) { .label = "2980_0" };
-    var result__5_13: bv4 := 0x0:bv4 { .label = "2984_0" };
-    goto(%aws_is_power_of_two_harness_397, %aws_is_power_of_two_harness_399);
-  ];
-  block %aws_is_power_of_two_harness_403 {.address = 0xb90; .originalLabel = "FmEyDWrtQraIPGuuFJEx1w=="} [
-    store le $stack bvadd($R31:bv64, 0x18:bv64) $R0:bv64 64 { .label = "2960_0" };
-    var Exp14__5_11: bv64 := load le $stack bvadd($R31:bv64, 0x18:bv64) 64 { .label = "2964_0$0" };
-    $R0: bv64 := Exp14__5_11:bv64 { .label = "2964_1" };
-    $R30: bv64 := 0xb9c:bv64 { .label = "2968_0" };
-    call @aws_is_power_of_two_2872 ();
-    goto(%aws_is_power_of_two_harness_401);
+    guard boolnot(eq($R0:bv64, 0x0:bv64));
+    $R1: bv64 := bvadd($R0:bv64, 0xffffffffffffffff:bv64) { .label = "2704_0" };
+    $R2: bv64 := bvxor($R0:bv64, $R1:bv64) { .label = "2708_0" };
+    var Cse2__5_44: bv64 := bvnot($R1:bv64) { .label = "2712_0" };
+    var Cse0__5_45: bv64 := bvadd($R2:bv64, bvnot($R1:bv64)) { .label = "2712_1" };
+    $VF: bv1 := bvnot(bvcomp(sign_extend(64, bvadd(Cse0__5_45:bv64, 0x1:bv64)), bvadd(bvadd(sign_extend(64, $R2:bv64), sign_extend(64, Cse2__5_44:bv64)), 0x1:bv128))) { .label = "2712_2" };
+    $CF: bv1 := bvnot(bvcomp(zero_extend(64, bvadd(Cse0__5_45:bv64, 0x1:bv64)), bvadd(bvadd(zero_extend(64, $R2:bv64), zero_extend(64, Cse2__5_44:bv64)), 0x1:bv128))) { .label = "2712_3" };
+    $ZF: bv1 := bvcomp(bvadd(Cse0__5_45:bv64, 0x1:bv64), 0x0:bv64) { .label = "2712_4" };
+    $NF: bv1 := extract(64, 63, bvadd(Cse0__5_45:bv64, 0x1:bv64)) { .label = "2712_5" };
+    goto(%aws_is_power_of_two_harness_27);
+  ];
+  block %aws_is_power_of_two_harness_31 {.address = 0xa8c; .originalLabel = "GQP+qohVSoGK3HKbCGOPtA=="} [
+    goto(%aws_is_power_of_two_harness_7, %aws_is_power_of_two_harness_29);
   ];
   block %aws_is_power_of_two_harness_basil_return_1 [
     return ();
@@ -1122,7 +213,7 @@ proc @aws_is_power_of_two_harness_2948 () -> ()
 
 
 
-prog entry @main_3048 {
+prog entry @main_1920 {
   .symbols = {
     .externalFunctions = [
       { .name = "_ITM_deregisterTMCloneTable"; .offset = 0x1ffc0 };
@@ -1138,46 +229,46 @@ prog entry @main_3048 {
     .globals = [
       { .name = "_DYNAMIC"; .address = 0x1fdb8; .size = 0x0 };
       { .name = "_GLOBAL_OFFSET_TABLE_"; .address = 0x1ffb8; .size = 0x0 };
-      { .name = "_IO_stdin_used"; .address = 0xcb8; .size = 0x20 };
-      { .name = "__FRAME_END__"; .address = 0x1238; .size = 0x0 };
-      { .name = "__abi_tag"; .address = 0x123c; .size = 0x100 };
+      { .name = "_IO_stdin_used"; .address = 0xbd0; .size = 0x20 };
+      { .name = "__FRAME_END__"; .address = 0x1118; .size = 0x0 };
+      { .name = "__abi_tag"; .address = 0x111c; .size = 0x100 };
       { .name = "__do_global_dtors_aux_fini_array_entry"; .address = 0x1fdb0; .size = 0x0 };
       { .name = "__frame_dummy_init_array_entry"; .address = 0x1fda8; .size = 0x0 };
       { .name = "completed.0"; .address = 0x20038; .size = 0x8 };
-      { .name = "test_ptr_to_statics"; .address = 0xcf8; .size = 0x40 }
+      { .name = "test_ptr_to_statics"; .address = 0xc10; .size = 0x40 }
     ];
     .funcEntries = [
-      { .name = "__CPROVER_allocated_memory"; .address = 0x948; .size = 0xe0 };
-      { .name = "__CPROVER_overflow_mult"; .address = 0xa2c; .size = 0x2e0 };
-      { .name = "__CPROVER_overflow_plus"; .address = 0x9ec; .size = 0x200 };
-      { .name = "__CPROVER_uninterpreted_compare"; .address = 0x9a8; .size = 0x220 };
-      { .name = "__CPROVER_uninterpreted_equals"; .address = 0x97c; .size = 0x160 };
-      { .name = "__CPROVER_uninterpreted_hasher"; .address = 0x964; .size = 0xc0 };
-      { .name = "__VERIFIER_assert"; .address = 0x900; .size = 0x1c0 };
-      { .name = "__VERIFIER_nondet_bool"; .address = 0xc00; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_char"; .address = 0xc8c; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_int"; .address = 0xc14; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_long"; .address = 0xc3c; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_short"; .address = 0xc50; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_uchar"; .address = 0xc78; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_uint"; .address = 0xc64; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_ulong"; .address = 0xc28; .size = 0xa0 };
-      { .name = "_start"; .address = 0x780; .size = 0x1a0 };
-      { .name = "assume_abort_if_not"; .address = 0x8cc; .size = 0x1a0 };
-      { .name = "aws_is_power_of_two_harness"; .address = 0xb84; .size = 0x320 };
-      { .name = "main"; .address = 0xbe8; .size = 0xc0 };
-      { .name = "my_abort"; .address = 0x938; .size = 0x80 };
-      { .name = "nondet_bool"; .address = 0xa88; .size = 0xc0 };
-      { .name = "nondet_int"; .address = 0xaa0; .size = 0xa0 };
-      { .name = "nondet_size_t"; .address = 0xab4; .size = 0xa0 };
-      { .name = "nondet_uint16_t"; .address = 0xac8; .size = 0xe0 };
-      { .name = "nondet_uint32_t"; .address = 0xae4; .size = 0xa0 };
-      { .name = "nondet_uint64_t"; .address = 0xaf8; .size = 0xa0 };
-      { .name = "nondet_uint8_t"; .address = 0xb0c; .size = 0xc0 };
-      { .name = "nondet_voidp"; .address = 0xb24; .size = 0xa0 };
-      { .name = "reach_error"; .address = 0x8a4; .size = 0x140 }
+      { .name = "__CPROVER_allocated_memory"; .address = 0x96c; .size = 0x80 };
+      { .name = "__CPROVER_overflow_mult"; .address = 0x9e0; .size = 0xe0 };
+      { .name = "__CPROVER_overflow_plus"; .address = 0x9c4; .size = 0xc0 };
+      { .name = "__CPROVER_uninterpreted_compare"; .address = 0x9a8; .size = 0xe0 };
+      { .name = "__CPROVER_uninterpreted_equals"; .address = 0x990; .size = 0xc0 };
+      { .name = "__CPROVER_uninterpreted_hasher"; .address = 0x980; .size = 0x80 };
+      { .name = "__VERIFIER_assert"; .address = 0x940; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_bool"; .address = 0xac0; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_char"; .address = 0xba0; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_int"; .address = 0xae0; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_long"; .address = 0xb20; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_short"; .address = 0xb40; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_uchar"; .address = 0xb80; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_uint"; .address = 0xb60; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_ulong"; .address = 0xb00; .size = 0xa0 };
+      { .name = "_start"; .address = 0x7c0; .size = 0x1a0 };
+      { .name = "assume_abort_if_not"; .address = 0x928; .size = 0xa0 };
+      { .name = "aws_is_power_of_two_harness"; .address = 0xa80; .size = 0x1e0 };
+      { .name = "main"; .address = 0x780; .size = 0xc0 };
+      { .name = "my_abort"; .address = 0x960; .size = 0x60 };
+      { .name = "nondet_bool"; .address = 0xa00; .size = 0x80 };
+      { .name = "nondet_int"; .address = 0xa10; .size = 0x80 };
+      { .name = "nondet_size_t"; .address = 0xa20; .size = 0x80 };
+      { .name = "nondet_uint16_t"; .address = 0xa30; .size = 0x80 };
+      { .name = "nondet_uint32_t"; .address = 0xa40; .size = 0x80 };
+      { .name = "nondet_uint64_t"; .address = 0xa50; .size = 0x80 };
+      { .name = "nondet_uint8_t"; .address = 0xa60; .size = 0x80 };
+      { .name = "nondet_voidp"; .address = 0xa70; .size = 0x80 };
+      { .name = "reach_error"; .address = 0x900; .size = 0x140 }
     ];
-    .globalOffsets = [ [ 0x1fda8; 0x8a0 ]; [ 0x1fdb0; 0x84c ]; [ 0x1ffd8; 0xbe8 ]; [ 0x20030; 0x20030 ] ]
+    .globalOffsets = [ [ 0x1fda8; 0x8e0 ]; [ 0x1fdb0; 0x88c ]; [ 0x1ffd8; 0x780 ]; [ 0x20030; 0x20030 ] ]
   };
   .initial_memory = [
   {
@@ -1252,8 +343,8 @@ prog entry @main_3048 {
     .size = 0xc0;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/1vxl5EBBJhZwBTDAg4IvQFN3AcqfuM/qvgLbghtwMCEIg7jH4CqZwSKQ6XA4ASSOCuS+AUkcTYk8QdI4hxI";
-      "4gC16nRVwAAAAA=="
+      "H4sIAAAAAAAA/1vxl5EBBJhZwBTDAw4IvQFNvAcqfuM/qngDO4Q2YGBCEYfxD0DVMwLFoVJgcAJJnBVJ/AKSOBuS+AMkcQ4k";
+      "cQATfP2owAAAAA=="
     ]
   };
   {
@@ -1268,7 +359,7 @@ prog entry @main_3048 {
     .address = 0x6e0;
     .size = 0x1c;
     .readOnly = false;
-    .bytes = [ "H4sIAAAAAAAA/7NXZr76t3r/yr/MDBONGBim/K0+uGI/UOwAc/w1AM47GKIcAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA/7NXZr76t3r/yr/MDBOdGBim/K0+uGI/UOwAc/w1ANeIfn0cAAAA" ]
   };
   {
     .name = ".plt";
@@ -1283,30 +374,28 @@ prog entry @main_3048 {
   {
     .name = ".text";
     .address = 0x780;
-    .size = 0x520;
+    .size = 0x434;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/6VTP2gTURz+Li/WodJCI0RKbS5V2lkyyIGQqw4HHUMWqZi0i4NT51RyrnVpUIhQsJtoBCeXImqqo5PVFgSF";
-      "d2krBR1SOh00nN+789JeesWIw493fO/3fe/357vSZbF5EfbGOGNXoOEI021dQu2HQE0CbfyyXMG7JOO759X3GD6+Z7km8Ep6";
-      "XropSlsZXWzGBTQsQ6Km8czyzAM/m0DRoUZWWu4cNdpCayCR2VI6vflZ4OPEYfXz9Ln7D7KH0w/Xmd8i93rbcud9bqLL7VTe";
-      "Pu+w7oNBuCnyyy3TMDVc9evdsVyb+b7+BdN9yT6+MnTYhXILxsGg6XYq75/19vKN/XUq73xdAMsCuVpi1C6ob83M+RiaudpT";
-      "aoXvyyoMWTUN3hUwhhGeIxlggfMqPmae0g3f+hunTA5nXF86wQtqUj3gnv6lqzMM12H/sW/wTg4f9dnLcXgnOQe1I5leHVV1";
-      "9JO7rfZ5nFsPuAngPGAf03gT0UjQU6oehzxAe3GDOhMKS7NOtVfOIKjhQyx/gLnhu1OLWNEXmystcbaxTR/vCNE4w/tVYF/N";
-      "fVLpUjPQHojRDuZ5C3gU4OsRfJZ4P1hZ8a8hxTihcTsmfyYGu3lKDflIbnSn9Mq+rtEr/NaS+KROHVhSOP+xovL5n30UjnqP";
-      "7naK+qGe/5+X6Elf+84Tb1Yf8l5fGZJiclymsCZLpuGkzLV8EgsOvZIdU37V7oa+mTnFr7vKr6yht7d/wDb6xP7njS72G3tk";
-      "jVAgBQAA"
+      "H4sIAAAAAAAA/6VTzy8DURD+Xp/EoW4kRKLdxcVBcEB6spXI3sXJpcXRn1CJdXFxYJE4SNSRuvaMOhIJlTYkDtsNIjhUenpJ";
+      "NzW7VVnPr0oPk9n5ZuabN9976ySO9h0O8xDYBIxJJ5HZO+axfFjhuXos1stzXTCyIbJ7jlSBa8LugflAnBZQxIsuOOWayM4r";
+      "la1rMg9/1IUGpC8qlfbf5oFhDRZMRl4lPwY8HwNTBeJQLV3MEEeRsxQC4bzLI9erwFl3efEq2rK0opajGxmqt6l3vKiLWa83";
+      "8NHrJA49LUpBiFbqj9taRGMY9c57pwuD6j3+Dk3s0B43ZAppFrcRKQU14SROvmh3S/v9pp9D+nNgjZG5s0F+Lj5gqrsDJpRB";
+      "M9BpTK7SHNJqpHrG6n0tE+b2y/jLO+7nd/EHwmvf/juWMTcOgz1b7cnOb/GtKg4lOS3lDqzRzz01fixktl08DLxazVTzw/x+";
+      "oM0fD0nxsBRHpXhCivv+yKu+OETvX2FIsyZcBsBOY7SrTbvSe3tytYgB8/TWpmpnX3/X2dvP/W+kvf3615HPNphvdP6/8m9+";
+      "XW0qNAQAAA=="
     ]
   };
   {
     .name = ".fini";
-    .address = 0xca0;
+    .address = 0xbb4;
     .size = 0x18;
     .readOnly = false;
     .bytes = [ "H4sIAAAAAAAA/7NXZr76t3r/yr/MDBP/Vh9csR/IP8Acfw0AdjFaHxgAAAA=" ]
   };
   {
     .name = ".rodata";
-    .address = 0xcb8;
+    .address = 0xbd0;
     .size = 0x48;
     .readOnly = true;
     .bytes = [
@@ -1315,32 +404,31 @@ prog entry @main_3048 {
   };
   {
     .name = ".eh_frame_hdr";
-    .address = 0xd00;
-    .size = 0x11c;
+    .address = 0xc18;
+    .size = 0x114;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/w3OLQ7CQBRF4VcKDoFATAKKIBBIxCSwgAoEcgSyC0COQCAQFUhEZQWiC0BUIhEsoLICgWABE/4eR33XnORG";
-      "g3g+jERGIrJ7qc7YDSbYe6uucYkbLPCIJyzxhheUj2qDFqUlkqDBFC1u0WGJHp+Y4/SrWmGGNRYY8IwmFrmixTs6DOix+6PH";
-      "MVZoscY9BnygafNL6bGPDifocYE5rrDCFGv0GPCApiPyB4dH3IgcAQAA"
+      "H4sIAAAAAAAA/xXOrQ3CYBSG0a+AqEQgSDDgKhiABFPZASqQyA6AQFYiEIxQiWAAZCWSESo7Agk/H6fqJDd53txkMd7OkhBW";
+      "IYTqHWM3DuHKtVv6iTHnhiUPrPjgmT0bTr8x3pnxyYI9S4aRXS55ZM4L97yx5oMNe7Z8sWP60/tnziUz5txwz4I1d2xYsR3+";
+      "H7qJ3aFjP3RMo44ZaxZsWLHliR3/YGiZ6RQBAAA="
     ]
   };
   {
     .name = ".eh_frame";
-    .address = 0xe20;
-    .size = 0x41c;
+    .address = 0xd30;
+    .size = 0x3ec;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/33RIU/DUBAH8Ne+wgxZKiaW8DImEBMTFROIigElgdCMQCAgKif5AA2ZRCAQS0C2DQKBQCInJhB4kNvUPgIG";
-      "0qT8X98juxD2mlyy3W93vbu5TD3W1Qlz4oa1vrbBXHyvI4KvouhI3K40ZK6NGCLn6RqZ6yKekfN1rok4RXwgt1/WVpupk/Gd";
-      "O7s3m75Xf+tihPNdFI6uqyFuEZ+oa6k6N7UzS+Djo/5th/Q7nE3LXtJf5bzwLeKhdtl3jvDg7p++OaKFvCB1e6SvsBjbhNeJ";
-      "B8R9uIC3iR8QjyzVPyB+RHwAD+Fd5V66mq30iCfwS3hE/Iz4CP60mK/ci843gT/Aa8R3iefwe4MLm7GbxX1Kp/fx4deG+gge";
-      "G3xgq/2WzZ/A+4b6EfwCHpL7HtP99Xx94ud0f/ib4f2CMzY2vN+Hv5j25+r/Wbo/PDF4Ah+a9ufm+0+4+f45V/f/z+XzA+jJ";
-      "0UocBAAA"
+      "H4sIAAAAAAAA/4XSsWrCQBgH8EsMFGqQGxyEimbo4JDBwbFD1RY6HEXEwYfI6CCd+gDZOisdOmboA3ToAzgU2rFKHyBDt4IO";
+      "6f9LTrzlvgv8Ifn/8l1yIVJUh/cwFcGy412EXSFx3UIW+6IYEA7POtTFyDu6vp6h7hr5RneluwiZIcGhKO7K2Ua0Cta10ZN/";
+      "v9t+No5zS2SAewI910RSWg9dr5qTK3/tUf+CTNDTuRif+jdL/4XM0YfGOm2c5ohCL41+tNuW70QeetXzbR7D+/CW4TeGK3gP";
+      "3jb81vAEfsnMp/CImc+0295vA5eM53DB7d8X4nfP7B/+w7iCfzCe+NX/Y/MU/sp4Bn8+/mva1TndMKyX+4c//tm/b67nm4aP";
+      "zf3XeI8drhyeODx1eObwDeN0/AMD2EEg7AMAAA=="
     ]
   };
   {
     .name = ".note.ABI-tag";
-    .address = 0x123c;
+    .address = 0x111c;
     .size = 0x20;
     .readOnly = false;
     .bytes = [ "H4sIAAAAAAAA/2NhYGAQAGJGIHb3C2UAAWYg5mKAAADshLlpIAAAAA==" ]
@@ -1350,14 +438,14 @@ prog entry @main_3048 {
     .address = 0x1fda8;
     .size = 0x8;
     .readOnly = false;
-    .bytes = [ "H4sIAAAAAAAA/1vAwQAGAIJ2gPwIAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA/3vAwQAGAG+0HdUIAAAA" ]
   };
   {
     .name = ".fini_array";
     .address = 0x1fdb0;
     .size = 0x8;
     .readOnly = false;
-    .bytes = [ "H4sIAAAAAAAA//PhYAADAKxG/ygIAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA/+vhYAADAJsBWVIIAAAA" ]
   };
   {
     .name = ".dynamic";
@@ -1365,9 +453,9 @@ prog entry @main_3048 {
     .size = 0x200;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/62QMRKCMBBFF5Uoip0OKnoNj2JJydDZchxLSo7gUSgpbZzRcSQO7EsRard58/j5CUkgOmd4ghcYw8Yo1/iN";
-      "YI9X32Bgii/gAdbkx1E+c/2J8tnZa88WD8lfU6VxfXyJ57q9rPAd3Io/1KS1WuAYKeEGzmECC+N/r0L/HncYjc7/WL2PW9rh";
-      "JX2L8/vywDPyN+7e6d/zA3eWNtQAAgAA"
+      "H4sIAAAAAAAA/62QPRKCMBBGF5SIP3Q4iso1OAqlpWNny5EoKTyAR7GktHFGx5E4si9FqNnmzcvmyyYJRKuAOSzhCt6NMsGv";
+      "S2WG19+g5x6P4Q429A+D/tTlQ+Wzs5c/Wzyi/5oojcvjC/ykxwvXki1ci1/EpLUaYIxUMIUzuIFn46/Xkf+OG5wP5n+svsdt";
+      "7fCKvMW5vjzwI/037v5p7PoB3lxvvQACAAA="
     ]
   };
   {
@@ -1375,7 +463,7 @@ prog entry @main_3048 {
     .address = 0x1ffb8;
     .size = 0x30;
     .readOnly = true;
-    .bytes = [ "H4sIAAAAAAAA/9vxl5EBH3jBjcoHAKkyh8MwAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA/9vxl5EBH2hgR+UDAIWJIMwwAAAA" ]
   };
   {
     .name = ".got.plt";

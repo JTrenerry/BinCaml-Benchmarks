@@ -47,7 +47,7 @@ proc @main_1984 () -> ()
   ];
   block %main_5 {.address = 0x984; .originalLabel = "Z34EBZxxREeqo89kog4x+w=="} [
     $R30: bv64 := 0x988:bv64 { .label = "2436_0" };
-    goto(%FUN_7a0_entry_11);
+    goto(%FUN_7a0_entry_7);
   ];
   block %main_7 [
     guard booland(eq($CF:bv1, 0x1:bv1), eq($ZF:bv1, 0x0:bv1));
@@ -629,7 +629,7 @@ proc @main_1984 () -> ()
     $R23: bv64 := $R0:bv64 { .label = "2044_0" };
     $R0: bv64 := zero_extend(32, bvconcat(extract(30, 0, $R20:bv64), 0x0:bv2)) { .label = "2048_0" };
     $R30: bv64 := 0x808:bv64 { .label = "2052_0" };
-    goto(%FUN_780_entry_7);
+    goto(%FUN_780_entry_11);
   ];
   block %main_213 {.address = 0x7f4; .originalLabel = "9pg820duTRmuzRo7HwsacQ=="} [
     goto(%main_211);
@@ -638,7 +638,7 @@ proc @main_1984 () -> ()
     guard boolnot(booland(eq($CF:bv1, 0x1:bv1), eq($ZF:bv1, 0x0:bv1)));
     $R0: bv64 := zero_extend(32, bvconcat(extract(30, 0, $R21:bv64), 0x0:bv2)) { .label = "2036_0" };
     $R30: bv64 := 0x7fc:bv64 { .label = "2040_0" };
-    goto(%FUN_780_entry_5);
+    goto(%FUN_780_entry_13);
   ];
   block %main_217 {.address = 0x7e0; .originalLabel = "EiDVwRpjRmes8aiv65E+HA=="} [
     $R1: bv64 := bvor($R21:bv64, $R0:bv64) { .label = "2016_0" };
@@ -658,26 +658,26 @@ proc @main_1984 () -> ()
     call @__VERIFIER_nondet_ulong_3136 ();
     goto(%main_217);
   ];
-  block %_inlineret_3 [
-    goto(%main_213);
+  block %_inlineret_3 {.originalLabel = "Z34EBZxxREeqo89kog4x+w=="} [
+    goto(%main_basil_return_1);
   ];
-  block %FUN_780_entry_5 {.address = 0x780} [
-    var R30_begin_FUN_780_1920_1: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "1920_0" };
-    var Exp14__5_2: bv64 := load le $mem bvadd($R16:bv64, 0x10:bv64) 64 { .label = "1924_0$0" };
-    $R17: bv64 := Exp14__5_2:bv64 { .label = "1924_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x10:bv64) { .label = "1928_0" };
-    assert eq($R30:bv64, R30_begin_FUN_780_1920_1:bv64) { .comment = "R30 = R30_in" };
-    call @malloc () { .label = "1932_2" };
-    goto(%FUN_780_basil_return_1_6);
+  block %FUN_7a0_entry_7 {.address = 0x7a0} [
+    var R30_begin_FUN_7a0_1952_1: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "1952_0" };
+    var Exp14__5_2: bv64 := load le $mem bvadd($R16:bv64, 0x20:bv64) 64 { .label = "1956_0$0" };
+    $R17: bv64 := Exp14__5_2:bv64 { .label = "1956_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x20:bv64) { .label = "1960_0" };
+    assert eq($R30:bv64, R30_begin_FUN_7a0_1952_1:bv64) { .comment = "R30 = R30_in" };
+    call @abort () { .label = "1964_2" };
+    goto(%FUN_7a0_basil_return_1_8);
   ];
-  block %FUN_780_basil_return_1_6 [
+  block %FUN_7a0_basil_return_1_8 [
     goto(%_inlineret_3);
   ];
   block %_inlineret_4 {.originalLabel = "dVXzhAyiRaKWs+RXIyo/9Q=="} [
     goto(%main_209);
   ];
-  block %FUN_780_entry_7 {.address = 0x780} [
+  block %FUN_780_entry_11 {.address = 0x780} [
     var R30_begin_FUN_780_1920_3: bv64 := $R30:bv64;
     $R16: bv64 := 0x20000:bv64 { .label = "1920_0" };
     var Exp14__5_4: bv64 := load le $mem bvadd($R16:bv64, 0x10:bv64) 64 { .label = "1924_0$0" };
@@ -685,58 +685,31 @@ proc @main_1984 () -> ()
     $R16: bv64 := bvadd($R16:bv64, 0x10:bv64) { .label = "1928_0" };
     assert eq($R30:bv64, R30_begin_FUN_780_1920_3:bv64) { .comment = "R30 = R30_in" };
     call @malloc () { .label = "1932_2" };
-    goto(%FUN_780_basil_return_1_8);
+    goto(%FUN_780_basil_return_1_12);
   ];
-  block %FUN_780_basil_return_1_8 [
+  block %FUN_780_basil_return_1_12 [
     goto(%_inlineret_4);
   ];
-  block %_inlineret_5 {.originalLabel = "Z34EBZxxREeqo89kog4x+w=="} [
-    goto(%main_basil_return_1);
+  block %_inlineret_5 [
+    goto(%main_213);
   ];
-  block %FUN_7a0_entry_11 {.address = 0x7a0} [
-    var R30_begin_FUN_7a0_1952_5: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "1952_0" };
-    var Exp14__5_6: bv64 := load le $mem bvadd($R16:bv64, 0x20:bv64) 64 { .label = "1956_0$0" };
-    $R17: bv64 := Exp14__5_6:bv64 { .label = "1956_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x20:bv64) { .label = "1960_0" };
-    assert eq($R30:bv64, R30_begin_FUN_7a0_1952_5:bv64) { .comment = "R30 = R30_in" };
-    call @abort () { .label = "1964_2" };
-    goto(%FUN_7a0_basil_return_1_12);
+  block %FUN_780_entry_13 {.address = 0x780} [
+    var R30_begin_FUN_780_1920_5: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "1920_0" };
+    var Exp14__5_6: bv64 := load le $mem bvadd($R16:bv64, 0x10:bv64) 64 { .label = "1924_0$0" };
+    $R17: bv64 := Exp14__5_6:bv64 { .label = "1924_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x10:bv64) { .label = "1928_0" };
+    assert eq($R30:bv64, R30_begin_FUN_780_1920_5:bv64) { .comment = "R30 = R30_in" };
+    call @malloc () { .label = "1932_2" };
+    goto(%FUN_780_basil_return_1_14);
   ];
-  block %FUN_7a0_basil_return_1_12 [
+  block %FUN_780_basil_return_1_14 [
     goto(%_inlineret_5);
   ];
   block %main_basil_return_1 [
     return ();
   ]
 ];
-
-
-proc @__VERIFIER_nondet_int_3104 () -> ()
-  { .name = "__VERIFIER_nondet_int"; .address = 0xc20; .returnBlock = "__VERIFIER_nondet_int_basil_return_1" }
-[
-  block %__VERIFIER_nondet_int_entry {.address = 0xc20; .originalLabel = "eYz2WWttTwq2WxnSlAIHqg=="} [
-    var Cse0__5_4: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "3104_0" };
-    store le $stack Cse0__5_4:bv64 $R29:bv64 64 { .label = "3104_1" };
-    store le $stack bvadd(Cse0__5_4:bv64, 0x8:bv64) $R30:bv64 64 { .label = "3104_2" };
-    $R31: bv64 := Cse0__5_4:bv64 { .label = "3104_3" };
-    $R0: bv64 := 0x0:bv64 { .label = "3108_0" };
-    $R29: bv64 := $R31:bv64 { .label = "3112_0" };
-    var Exp16__5_5: bv64 := load le $stack $R31:bv64 64 { .label = "3116_0$0" };
-    var Exp18__5_6: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "3116_1$0" };
-    $R29: bv64 := Exp16__5_5:bv64 { .label = "3116_2" };
-    $R30: bv64 := Exp18__5_6:bv64 { .label = "3116_3" };
-    $R31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "3116_4" };
-    goto(%__VERIFIER_nondet_int_basil_return_1);
-  ];
-  block %__VERIFIER_nondet_int_basil_return_1 [
-    return ();
-  ]
-];
-
-
-proc @abort () -> ()
-  { .name = "abort" };
 
 
 proc @__assert_fail () -> ()
@@ -762,12 +735,12 @@ proc @reach_error_2848 () -> ()
     $R2: bv64 := 0x5b:bv64 { .label = "2880_0" };
     $R30: bv64 := 0xb48:bv64 { .label = "2884_0" };
     assert eq($R30:bv64, R30_begin_reach_error_2848:bv64) { .comment = "R30 = R30_in" };
-    goto(%FUN_7b0_entry_9);
+    goto(%FUN_7b0_entry_15);
   ];
   block %_inlineret_3 {.originalLabel = "1B4yLqLSTR620oRfmWqVdg=="} [
     goto(%reach_error_basil_return_1);
   ];
-  block %FUN_7b0_entry_9 {.address = 0x7b0} [
+  block %FUN_7b0_entry_15 {.address = 0x7b0} [
     var R30_begin_FUN_7b0_1968_1: bv64 := $R30:bv64;
     $R16: bv64 := 0x20000:bv64 { .label = "1968_0" };
     var Exp14__5_2: bv64 := load le $mem bvadd($R16:bv64, 0x28:bv64) 64 { .label = "1972_0$0" };
@@ -775,15 +748,19 @@ proc @reach_error_2848 () -> ()
     $R16: bv64 := bvadd($R16:bv64, 0x28:bv64) { .label = "1976_0" };
     assert eq($R30:bv64, R30_begin_FUN_7b0_1968_1:bv64) { .comment = "R30 = R30_in" };
     call @__assert_fail () { .label = "1980_2" };
-    goto(%FUN_7b0_basil_return_1_10);
+    goto(%FUN_7b0_basil_return_1_16);
   ];
-  block %FUN_7b0_basil_return_1_10 [
+  block %FUN_7b0_basil_return_1_16 [
     goto(%_inlineret_3);
   ];
   block %reach_error_basil_return_1 [
     return ();
   ]
 ];
+
+
+proc @malloc () -> ()
+  { .name = "malloc" };
 
 
 proc @__VERIFIER_nondet_ulong_3136 () -> ()
@@ -809,8 +786,31 @@ proc @__VERIFIER_nondet_ulong_3136 () -> ()
 ];
 
 
-proc @malloc () -> ()
-  { .name = "malloc" };
+proc @abort () -> ()
+  { .name = "abort" };
+
+
+proc @__VERIFIER_nondet_int_3104 () -> ()
+  { .name = "__VERIFIER_nondet_int"; .address = 0xc20; .returnBlock = "__VERIFIER_nondet_int_basil_return_1" }
+[
+  block %__VERIFIER_nondet_int_entry {.address = 0xc20; .originalLabel = "eYz2WWttTwq2WxnSlAIHqg=="} [
+    var Cse0__5_4: bv64 := bvadd($R31:bv64, 0xfffffffffffffff0:bv64) { .label = "3104_0" };
+    store le $stack Cse0__5_4:bv64 $R29:bv64 64 { .label = "3104_1" };
+    store le $stack bvadd(Cse0__5_4:bv64, 0x8:bv64) $R30:bv64 64 { .label = "3104_2" };
+    $R31: bv64 := Cse0__5_4:bv64 { .label = "3104_3" };
+    $R0: bv64 := 0x0:bv64 { .label = "3108_0" };
+    $R29: bv64 := $R31:bv64 { .label = "3112_0" };
+    var Exp16__5_5: bv64 := load le $stack $R31:bv64 64 { .label = "3116_0$0" };
+    var Exp18__5_6: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "3116_1$0" };
+    $R29: bv64 := Exp16__5_5:bv64 { .label = "3116_2" };
+    $R30: bv64 := Exp18__5_6:bv64 { .label = "3116_3" };
+    $R31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "3116_4" };
+    goto(%__VERIFIER_nondet_int_basil_return_1);
+  ];
+  block %__VERIFIER_nondet_int_basil_return_1 [
+    return ();
+  ]
+];
 
 
 

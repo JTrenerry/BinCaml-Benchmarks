@@ -5,8 +5,8 @@ gtirb-semantics --serve & sleep 8
 
 for test in */*; do
       [ -d "$test" ] || continue
-      make CC=$CC -C "$test" -j8 -B
-      make CC=$CC -C "$test" -j8 -f ../../lift.mk -B
+      make CC=$CC -C "$test" -j8
+      make CC=$CC -C "$test" -j8 -f ../../lift.mk
     done
 
 gtirb-semantics --shutdown-server

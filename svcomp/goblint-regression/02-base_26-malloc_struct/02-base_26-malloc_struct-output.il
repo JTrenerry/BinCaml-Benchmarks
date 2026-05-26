@@ -4,186 +4,184 @@ var $R0: bv64;
 var $R1: bv64;
 var $R16: bv64;
 var $R17: bv64;
+var $R19: bv64;
 var $R2: bv64;
+var $R20: bv64;
+var $R21: bv64;
 var $R29: bv64;
 var $R3: bv64;
 var $R30: bv64;
 var $R31: bv64;
-var $R4: bv64;
 
-prog entry @main_2620;
+prog entry @main_2240;
 
-proc @main_2620 () -> ()
-  { .name = "main"; .address = 0xa3c; .returnBlock = "main_basil_return_1" }
+proc @main_2240 () -> ()
+  { .name = "main"; .address = 0x8c0; .returnBlock = "main_basil_return_1" }
 [
-  block %main_entry {.address = 0xa3c; .originalLabel = "9pg820duTRmuzRo7HwsacQ=="} [
-    var Cse0__5_44: bv64 := bvadd($R31:bv64, 0xffffffffffffffe0:bv64) { .label = "2620_0" };
-    store le $stack Cse0__5_44:bv64 $R29:bv64 64 { .label = "2620_1" };
-    store le $stack bvadd(Cse0__5_44:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2620_2" };
-    $R31: bv64 := Cse0__5_44:bv64 { .label = "2620_3" };
-    $R29: bv64 := $R31:bv64 { .label = "2624_0" };
-    $R0: bv64 := 0x8:bv64 { .label = "2628_0" };
-    $R30: bv64 := 0xa4c:bv64 { .label = "2632_0" };
-    goto(%FUN_850_entry_15);
+  block %main_entry {.address = 0x8c0; .originalLabel = "5jlZESzjQ4a4yO3+e1nyHQ=="} [
+    var Cse0__5_27: bv64 := bvadd($R31:bv64, 0xffffffffffffffc0:bv64) { .label = "2240_0" };
+    store le $stack Cse0__5_27:bv64 $R29:bv64 64 { .label = "2240_1" };
+    store le $stack bvadd(Cse0__5_27:bv64, 0x8:bv64) $R30:bv64 64 { .label = "2240_2" };
+    $R31: bv64 := Cse0__5_27:bv64 { .label = "2240_3" };
+    $R0: bv64 := 0x8:bv64 { .label = "2244_0" };
+    $R29: bv64 := $R31:bv64 { .label = "2248_0" };
+    var Cse0__5_28: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "2252_0" };
+    store le $stack Cse0__5_28:bv64 $R19:bv64 64 { .label = "2252_1" };
+    store le $stack bvadd(Cse0__5_28:bv64, 0x8:bv64) $R20:bv64 64 { .label = "2252_2" };
+    $R19: bv64 := 0x20000:bv64 { .label = "2256_0" };
+    $R19: bv64 := bvadd($R19:bv64, 0x60:bv64) { .label = "2260_0" };
+    store le $stack bvadd($R31:bv64, 0x20:bv64) $R21:bv64 64 { .label = "2264_0" };
+    $R30: bv64 := 0x8e0:bv64 { .label = "2268_0" };
+    goto(%FUN_850_entry_21);
   ];
-  block %main_3 {.address = 0xad8; .originalLabel = "+x6lIDG7T2eraC+LkXZ5rw=="} [
-    $R0: bv64 := 0x0:bv64 { .label = "2776_0" };
-    var Exp16__5_42: bv64 := load le $stack $R31:bv64 64 { .label = "2780_0$0" };
-    var Exp18__5_43: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "2780_1$0" };
-    $R29: bv64 := Exp16__5_42:bv64 { .label = "2780_2" };
-    $R30: bv64 := Exp18__5_43:bv64 { .label = "2780_3" };
-    $R31: bv64 := bvadd($R31:bv64, 0x20:bv64) { .label = "2780_4" };
+  block %main_5 {.address = 0x930; .originalLabel = "WTjM+CpMSlaCQoaCOxiagA=="} [
+    var Exp14__5_30: bv64 := load le $stack bvadd($R31:bv64, 0x20:bv64) 64 { .label = "2352_0$0" };
+    $R21: bv64 := Exp14__5_30:bv64 { .label = "2352_1" };
+    $R0: bv64 := 0x0:bv64 { .label = "2356_0" };
+    var Cse0__5_31: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "2360_0" };
+    var Exp16__5_32: bv64 := load le $stack Cse0__5_31:bv64 64 { .label = "2360_1$0" };
+    var Exp18__5_33: bv64 := load le $stack bvadd(Cse0__5_31:bv64, 0x8:bv64) 64 { .label = "2360_2$0" };
+    $R19: bv64 := Exp16__5_32:bv64 { .label = "2360_3" };
+    $R20: bv64 := Exp18__5_33:bv64 { .label = "2360_4" };
+    var Exp16__5_34: bv64 := load le $stack $R31:bv64 64 { .label = "2364_0$0" };
+    var Exp18__5_35: bv64 := load le $stack bvadd($R31:bv64, 0x8:bv64) 64 { .label = "2364_1$0" };
+    $R29: bv64 := Exp16__5_34:bv64 { .label = "2364_2" };
+    $R30: bv64 := Exp18__5_35:bv64 { .label = "2364_3" };
+    $R31: bv64 := bvadd($R31:bv64, 0x40:bv64) { .label = "2364_4" };
     goto(%main_basil_return_1);
   ];
-  block %main_5 {.address = 0xac0; .originalLabel = "0GyMkUB2TkmOe1d8kZfn9g=="} [
-    var Exp14__5_46: bv64 := load le $stack bvadd($R31:bv64, 0x18:bv64) 64 { .label = "2752_0$0" };
-    $R0: bv64 := Exp14__5_46:bv64 { .label = "2752_1" };
-    var Exp14__5_47: bv32 := load le $mem bvadd($R0:bv64, 0x4:bv64) 32 { .label = "2756_0$0" };
-    $R0: bv64 := zero_extend(32, Exp14__5_47:bv32) { .label = "2756_1" };
-    $R1: bv64 := zero_extend(32, extract(32, 0, $R0:bv64)) { .label = "2760_0" };
-    $R0: bv64 := 0x0:bv64 { .label = "2764_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0xba8:bv64) { .label = "2768_0" };
-    $R30: bv64 := 0xad8:bv64 { .label = "2772_0" };
-    goto(%FUN_890_entry_17);
+  block %main_7 {.address = 0x924; .originalLabel = "9oceKFiPSN69RSkX65b7GQ=="} [
+    var Exp14__5_29: bv32 := load le $mem bvadd($R21:bv64, 0x4:bv64) 32 { .label = "2340_0$0" };
+    $R1: bv64 := zero_extend(32, Exp14__5_29:bv32) { .label = "2340_1" };
+    $R0: bv64 := bvadd($R20:bv64, 0xc38:bv64) { .label = "2344_0" };
+    $R30: bv64 := 0x930:bv64 { .label = "2348_0" };
+    goto(%FUN_890_entry_7);
   ];
-  block %main_7 {.address = 0xab4; .originalLabel = "bJFyjddCQ92VoD8poMrH4g=="} [
-    $R0: bv64 := 0x20000:bv64 { .label = "2740_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0x68:bv64) { .label = "2744_0" };
-    $R30: bv64 := 0xac0:bv64 { .label = "2748_0" };
-    goto(%FUN_8b0_entry_9);
+  block %main_9 {.address = 0x91c; .originalLabel = "vIU4IpBoQ7iHGSsu/mSe3g=="} [
+    $R0: bv64 := $R19:bv64 { .label = "2332_0" };
+    $R30: bv64 := 0x924:bv64 { .label = "2336_0" };
+    goto(%FUN_8b0_entry_11);
   ];
-  block %main_9 {.address = 0xa94; .originalLabel = "6qOhgM5IRSK7mKNNAoq6oA=="} [
-    $R0: bv64 := 0x20000:bv64 { .label = "2708_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0x60:bv64) { .label = "2712_0" };
-    var Exp14__5_40: bv64 := load le $mem $R0:bv64 64 { .label = "2716_0$0" };
-    $R0: bv64 := Exp14__5_40:bv64 { .label = "2716_1" };
-    var Exp14__5_41: bv32 := load le $mem $R0:bv64 32 { .label = "2720_0$0" };
-    $R0: bv64 := zero_extend(32, Exp14__5_41:bv32) { .label = "2720_1" };
-    $R1: bv64 := zero_extend(32, extract(32, 0, $R0:bv64)) { .label = "2724_0" };
-    $R0: bv64 := 0x0:bv64 { .label = "2728_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0xba8:bv64) { .label = "2732_0" };
-    $R30: bv64 := 0xab4:bv64 { .label = "2736_0" };
-    goto(%FUN_890_entry_19);
+  block %main_11 {.address = 0x908; .originalLabel = "QIZPtsaTQjiAsr+paN6ljw=="} [
+    var Exp14__5_36: bv64 := load le $mem bvadd($R19:bv64, 0x30:bv64) 64 { .label = "2312_0$0" };
+    $R0: bv64 := Exp14__5_36:bv64 { .label = "2312_1" };
+    $R20: bv64 := 0x0:bv64 { .label = "2316_0" };
+    var Exp14__5_37: bv32 := load le $mem $R0:bv64 32 { .label = "2320_0$0" };
+    $R1: bv64 := zero_extend(32, Exp14__5_37:bv32) { .label = "2320_1" };
+    $R0: bv64 := bvadd($R20:bv64, 0xc38:bv64) { .label = "2324_0" };
+    $R30: bv64 := 0x91c:bv64 { .label = "2328_0" };
+    goto(%FUN_890_entry_9);
   ];
-  block %main_11 {.address = 0xa88; .originalLabel = "uFelqPhtT9iz8WRIVKTgXw=="} [
-    $R0: bv64 := 0x20000:bv64 { .label = "2696_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0x68:bv64) { .label = "2700_0" };
-    $R30: bv64 := 0xa94:bv64 { .label = "2704_0" };
-    goto(%FUN_8a0_entry_11);
+  block %main_13 {.address = 0x900; .originalLabel = "pao7tNGFTG2/wwL2A6BKrQ=="} [
+    $R0: bv64 := $R19:bv64 { .label = "2304_0" };
+    $R30: bv64 := 0x908:bv64 { .label = "2308_0" };
+    goto(%FUN_8a0_entry_15);
   ];
-  block %main_13 {.address = 0xa4c; .originalLabel = "dVXzhAyiRaKWs+RXIyo/9Q=="} [
-    $R1: bv64 := $R0:bv64 { .label = "2636_0" };
-    $R0: bv64 := 0x20000:bv64 { .label = "2640_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0x60:bv64) { .label = "2644_0" };
-    store le $mem $R0:bv64 $R1:bv64 64 { .label = "2648_0" };
-    $R0: bv64 := 0x20000:bv64 { .label = "2652_0" };
-    $R0: bv64 := bvadd($R0:bv64, 0x60:bv64) { .label = "2656_0" };
-    var Exp14__5_45: bv64 := load le $mem $R0:bv64 64 { .label = "2660_0$0" };
-    $R0: bv64 := Exp14__5_45:bv64 { .label = "2660_1" };
-    store le $stack bvadd($R31:bv64, 0x18:bv64) $R0:bv64 64 { .label = "2664_0" };
-    $R4: bv64 := bvadd($R31:bv64, 0x10:bv64) { .label = "2668_0" };
-    $R3: bv64 := 0x0:bv64 { .label = "2672_0" };
-    $R0: bv64 := 0x0:bv64 { .label = "2676_0" };
-    $R2: bv64 := bvadd($R0:bv64, 0x9e4:bv64) { .label = "2680_0" };
-    $R1: bv64 := 0x0:bv64 { .label = "2684_0" };
-    $R0: bv64 := $R4:bv64 { .label = "2688_0" };
-    $R30: bv64 := 0xa88:bv64 { .label = "2692_0" };
-    goto(%FUN_880_entry_21);
+  block %main_15 {.address = 0x8e0; .originalLabel = "I2aaHzp+TUWUl9oP4OxUPg=="} [
+    $R2: bv64 := 0x0:bv64 { .label = "2272_0" };
+    $R2: bv64 := bvadd($R2:bv64, 0xac0:bv64) { .label = "2276_0" };
+    $R3: bv64 := 0x0:bv64 { .label = "2280_0" };
+    $R1: bv64 := 0x0:bv64 { .label = "2284_0" };
+    $R21: bv64 := $R0:bv64 { .label = "2288_0" };
+    $R0: bv64 := bvadd($R31:bv64, 0x38:bv64) { .label = "2292_0" };
+    store le $mem bvadd($R19:bv64, 0x30:bv64) $R21:bv64 64 { .label = "2296_0" };
+    $R30: bv64 := 0x900:bv64 { .label = "2300_0" };
+    goto(%FUN_880_entry_19);
   ];
-  block %_inlineret_3 {.originalLabel = "bJFyjddCQ92VoD8poMrH4g=="} [
+  block %_inlineret_3 {.originalLabel = "9oceKFiPSN69RSkX65b7GQ=="} [
     goto(%main_5);
   ];
-  block %FUN_8b0_entry_9 {.address = 0x8b0} [
-    var R30_begin_FUN_8b0_2224_1: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "2224_0" };
-    var Exp14__5_2: bv64 := load le $mem bvadd($R16:bv64, 0x40:bv64) 64 { .label = "2228_0$0" };
-    $R17: bv64 := Exp14__5_2:bv64 { .label = "2228_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x40:bv64) { .label = "2232_0" };
-    assert eq($R30:bv64, R30_begin_FUN_8b0_2224_1:bv64) { .comment = "R30 = R30_in" };
-    call @pthread_mutex_unlock () { .label = "2236_2" };
-    goto(%FUN_8b0_basil_return_1_10);
+  block %FUN_890_entry_7 {.address = 0x890} [
+    var R30_begin_FUN_890_2192_1: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "2192_0" };
+    var Exp14__5_2: bv64 := load le $mem bvadd($R16:bv64, 0x30:bv64) 64 { .label = "2196_0$0" };
+    $R17: bv64 := Exp14__5_2:bv64 { .label = "2196_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x30:bv64) { .label = "2200_0" };
+    assert eq($R30:bv64, R30_begin_FUN_890_2192_1:bv64) { .comment = "R30 = R30_in" };
+    call @printf () { .label = "2204_2" };
+    goto(%FUN_890_basil_return_1_8);
   ];
-  block %FUN_8b0_basil_return_1_10 [
+  block %FUN_890_basil_return_1_8 [
     goto(%_inlineret_3);
   ];
-  block %_inlineret_4 {.originalLabel = "uFelqPhtT9iz8WRIVKTgXw=="} [
+  block %_inlineret_4 {.originalLabel = "QIZPtsaTQjiAsr+paN6ljw=="} [
     goto(%main_9);
   ];
-  block %FUN_8a0_entry_11 {.address = 0x8a0} [
-    var R30_begin_FUN_8a0_2208_3: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "2208_0" };
-    var Exp14__5_4: bv64 := load le $mem bvadd($R16:bv64, 0x38:bv64) 64 { .label = "2212_0$0" };
-    $R17: bv64 := Exp14__5_4:bv64 { .label = "2212_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x38:bv64) { .label = "2216_0" };
-    assert eq($R30:bv64, R30_begin_FUN_8a0_2208_3:bv64) { .comment = "R30 = R30_in" };
-    call @pthread_mutex_lock () { .label = "2220_2" };
-    goto(%FUN_8a0_basil_return_1_12);
+  block %FUN_890_entry_9 {.address = 0x890} [
+    var R30_begin_FUN_890_2192_3: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "2192_0" };
+    var Exp14__5_4: bv64 := load le $mem bvadd($R16:bv64, 0x30:bv64) 64 { .label = "2196_0$0" };
+    $R17: bv64 := Exp14__5_4:bv64 { .label = "2196_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x30:bv64) { .label = "2200_0" };
+    assert eq($R30:bv64, R30_begin_FUN_890_2192_3:bv64) { .comment = "R30 = R30_in" };
+    call @printf () { .label = "2204_2" };
+    goto(%FUN_890_basil_return_1_10);
   ];
-  block %FUN_8a0_basil_return_1_12 [
+  block %FUN_890_basil_return_1_10 [
     goto(%_inlineret_4);
   ];
-  block %_inlineret_5 {.originalLabel = "9pg820duTRmuzRo7HwsacQ=="} [
-    goto(%main_13);
-  ];
-  block %FUN_850_entry_15 {.address = 0x850} [
-    var R30_begin_FUN_850_2128_5: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "2128_0" };
-    var Exp14__5_6: bv64 := load le $mem bvadd($R16:bv64, 0x10:bv64) 64 { .label = "2132_0$0" };
-    $R17: bv64 := Exp14__5_6:bv64 { .label = "2132_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x10:bv64) { .label = "2136_0" };
-    assert eq($R30:bv64, R30_begin_FUN_850_2128_5:bv64) { .comment = "R30 = R30_in" };
-    call @malloc () { .label = "2140_2" };
-    goto(%FUN_850_basil_return_1_16);
-  ];
-  block %FUN_850_basil_return_1_16 [
-    goto(%_inlineret_5);
-  ];
-  block %_inlineret_6 {.originalLabel = "0GyMkUB2TkmOe1d8kZfn9g=="} [
-    goto(%main_3);
-  ];
-  block %FUN_890_entry_17 {.address = 0x890} [
-    var R30_begin_FUN_890_2192_7: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "2192_0" };
-    var Exp14__5_8: bv64 := load le $mem bvadd($R16:bv64, 0x30:bv64) 64 { .label = "2196_0$0" };
-    $R17: bv64 := Exp14__5_8:bv64 { .label = "2196_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x30:bv64) { .label = "2200_0" };
-    assert eq($R30:bv64, R30_begin_FUN_890_2192_7:bv64) { .comment = "R30 = R30_in" };
-    call @printf () { .label = "2204_2" };
-    goto(%FUN_890_basil_return_1_18);
-  ];
-  block %FUN_890_basil_return_1_18 [
-    goto(%_inlineret_6);
-  ];
-  block %_inlineret_7 {.originalLabel = "6qOhgM5IRSK7mKNNAoq6oA=="} [
+  block %_inlineret_5 {.originalLabel = "vIU4IpBoQ7iHGSsu/mSe3g=="} [
     goto(%main_7);
   ];
-  block %FUN_890_entry_19 {.address = 0x890} [
-    var R30_begin_FUN_890_2192_9: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "2192_0" };
-    var Exp14__5_10: bv64 := load le $mem bvadd($R16:bv64, 0x30:bv64) 64 { .label = "2196_0$0" };
-    $R17: bv64 := Exp14__5_10:bv64 { .label = "2196_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x30:bv64) { .label = "2200_0" };
-    assert eq($R30:bv64, R30_begin_FUN_890_2192_9:bv64) { .comment = "R30 = R30_in" };
-    call @printf () { .label = "2204_2" };
-    goto(%FUN_890_basil_return_1_20);
+  block %FUN_8b0_entry_11 {.address = 0x8b0} [
+    var R30_begin_FUN_8b0_2224_5: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "2224_0" };
+    var Exp14__5_6: bv64 := load le $mem bvadd($R16:bv64, 0x40:bv64) 64 { .label = "2228_0$0" };
+    $R17: bv64 := Exp14__5_6:bv64 { .label = "2228_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x40:bv64) { .label = "2232_0" };
+    assert eq($R30:bv64, R30_begin_FUN_8b0_2224_5:bv64) { .comment = "R30 = R30_in" };
+    call @pthread_mutex_unlock () { .label = "2236_2" };
+    goto(%FUN_8b0_basil_return_1_12);
   ];
-  block %FUN_890_basil_return_1_20 [
-    goto(%_inlineret_7);
+  block %FUN_8b0_basil_return_1_12 [
+    goto(%_inlineret_5);
   ];
-  block %_inlineret_8 {.originalLabel = "dVXzhAyiRaKWs+RXIyo/9Q=="} [
+  block %_inlineret_6 {.originalLabel = "pao7tNGFTG2/wwL2A6BKrQ=="} [
     goto(%main_11);
   ];
-  block %FUN_880_entry_21 {.address = 0x880} [
-    var R30_begin_FUN_880_2176_11: bv64 := $R30:bv64;
-    $R16: bv64 := 0x20000:bv64 { .label = "2176_0" };
-    var Exp14__5_12: bv64 := load le $mem bvadd($R16:bv64, 0x28:bv64) 64 { .label = "2180_0$0" };
-    $R17: bv64 := Exp14__5_12:bv64 { .label = "2180_1" };
-    $R16: bv64 := bvadd($R16:bv64, 0x28:bv64) { .label = "2184_0" };
-    assert eq($R30:bv64, R30_begin_FUN_880_2176_11:bv64) { .comment = "R30 = R30_in" };
-    call @pthread_create () { .label = "2188_2" };
-    goto(%FUN_880_basil_return_1_22);
+  block %FUN_8a0_entry_15 {.address = 0x8a0} [
+    var R30_begin_FUN_8a0_2208_7: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "2208_0" };
+    var Exp14__5_8: bv64 := load le $mem bvadd($R16:bv64, 0x38:bv64) 64 { .label = "2212_0$0" };
+    $R17: bv64 := Exp14__5_8:bv64 { .label = "2212_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x38:bv64) { .label = "2216_0" };
+    assert eq($R30:bv64, R30_begin_FUN_8a0_2208_7:bv64) { .comment = "R30 = R30_in" };
+    call @pthread_mutex_lock () { .label = "2220_2" };
+    goto(%FUN_8a0_basil_return_1_16);
   ];
-  block %FUN_880_basil_return_1_22 [
+  block %FUN_8a0_basil_return_1_16 [
+    goto(%_inlineret_6);
+  ];
+  block %_inlineret_7 {.originalLabel = "I2aaHzp+TUWUl9oP4OxUPg=="} [
+    goto(%main_13);
+  ];
+  block %FUN_880_entry_19 {.address = 0x880} [
+    var R30_begin_FUN_880_2176_9: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "2176_0" };
+    var Exp14__5_10: bv64 := load le $mem bvadd($R16:bv64, 0x28:bv64) 64 { .label = "2180_0$0" };
+    $R17: bv64 := Exp14__5_10:bv64 { .label = "2180_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x28:bv64) { .label = "2184_0" };
+    assert eq($R30:bv64, R30_begin_FUN_880_2176_9:bv64) { .comment = "R30 = R30_in" };
+    call @pthread_create () { .label = "2188_2" };
+    goto(%FUN_880_basil_return_1_20);
+  ];
+  block %FUN_880_basil_return_1_20 [
+    goto(%_inlineret_7);
+  ];
+  block %_inlineret_8 {.originalLabel = "5jlZESzjQ4a4yO3+e1nyHQ=="} [
+    goto(%main_15);
+  ];
+  block %FUN_850_entry_21 {.address = 0x850} [
+    var R30_begin_FUN_850_2128_11: bv64 := $R30:bv64;
+    $R16: bv64 := 0x20000:bv64 { .label = "2128_0" };
+    var Exp14__5_12: bv64 := load le $mem bvadd($R16:bv64, 0x10:bv64) 64 { .label = "2132_0$0" };
+    $R17: bv64 := Exp14__5_12:bv64 { .label = "2132_1" };
+    $R16: bv64 := bvadd($R16:bv64, 0x10:bv64) { .label = "2136_0" };
+    assert eq($R30:bv64, R30_begin_FUN_850_2128_11:bv64) { .comment = "R30 = R30_in" };
+    call @malloc () { .label = "2140_2" };
+    goto(%FUN_850_basil_return_1_22);
+  ];
+  block %FUN_850_basil_return_1_22 [
     goto(%_inlineret_8);
   ];
   block %main_basil_return_1 [
@@ -192,16 +190,12 @@ proc @main_2620 () -> ()
 ];
 
 
-proc @pthread_create () -> ()
-  { .name = "pthread_create" };
-
-
-proc @printf () -> ()
-  { .name = "printf" };
-
-
 proc @malloc () -> ()
   { .name = "malloc" };
+
+
+proc @pthread_create () -> ()
+  { .name = "pthread_create" };
 
 
 proc @pthread_mutex_lock () -> ()
@@ -212,9 +206,13 @@ proc @pthread_mutex_unlock () -> ()
   { .name = "pthread_mutex_unlock" };
 
 
+proc @printf () -> ()
+  { .name = "printf" };
 
 
-prog entry @main_2620 {
+
+
+prog entry @main_2240 {
   .symbols = {
     .externalFunctions = [
       { .name = "_ITM_deregisterTMCloneTable"; .offset = 0x1ffc0 };
@@ -234,30 +232,30 @@ prog entry @main_2620 {
     .globals = [
       { .name = "_DYNAMIC"; .address = 0x1fdb8; .size = 0x0 };
       { .name = "_GLOBAL_OFFSET_TABLE_"; .address = 0x1ffb8; .size = 0x0 };
-      { .name = "_IO_stdin_used"; .address = 0xba0; .size = 0x20 };
-      { .name = "__FRAME_END__"; .address = 0xe08; .size = 0x0 };
-      { .name = "__abi_tag"; .address = 0xe0c; .size = 0x100 };
+      { .name = "_IO_stdin_used"; .address = 0xc30; .size = 0x20 };
+      { .name = "__FRAME_END__"; .address = 0xeb0; .size = 0x0 };
+      { .name = "__abi_tag"; .address = 0xeb4; .size = 0x100 };
       { .name = "__do_global_dtors_aux_fini_array_entry"; .address = 0x1fdb0; .size = 0x0 };
       { .name = "__frame_dummy_init_array_entry"; .address = 0x1fda8; .size = 0x0 };
       { .name = "completed.0"; .address = 0x20058; .size = 0x8 };
-      { .name = "d"; .address = 0x20060; .size = 0x40 };
-      { .name = "m"; .address = 0x20068; .size = 0x180 };
-      { .name = "test_ptr_to_statics"; .address = 0xbb0; .size = 0x40 }
+      { .name = "d"; .address = 0x20090; .size = 0x40 };
+      { .name = "m"; .address = 0x20060; .size = 0x180 };
+      { .name = "test_ptr_to_statics"; .address = 0xc48; .size = 0x40 }
     ];
     .funcEntries = [
-      { .name = "__VERIFIER_nondet_bool"; .address = 0xae4; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_char"; .address = 0xb70; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_int"; .address = 0xaf8; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_long"; .address = 0xb20; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_short"; .address = 0xb34; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_uchar"; .address = 0xb5c; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_uint"; .address = 0xb48; .size = 0xa0 };
-      { .name = "__VERIFIER_nondet_ulong"; .address = 0xb0c; .size = 0xa0 };
-      { .name = "_start"; .address = 0x8c0; .size = 0x1a0 };
-      { .name = "main"; .address = 0xa3c; .size = 0x540 };
-      { .name = "t_fun"; .address = 0x9e4; .size = 0x2c0 }
+      { .name = "__VERIFIER_nondet_bool"; .address = 0xb20; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_char"; .address = 0xc00; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_int"; .address = 0xb40; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_long"; .address = 0xb80; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_short"; .address = 0xba0; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_uchar"; .address = 0xbe0; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_uint"; .address = 0xbc0; .size = 0xa0 };
+      { .name = "__VERIFIER_nondet_ulong"; .address = 0xb60; .size = 0xa0 };
+      { .name = "_start"; .address = 0x980; .size = 0x1a0 };
+      { .name = "main"; .address = 0x8c0; .size = 0x420 };
+      { .name = "t_fun"; .address = 0xac0; .size = 0x220 }
     ];
-    .globalOffsets = [ [ 0x1fda8; 0x9e0 ]; [ 0x1fdb0; 0x98c ]; [ 0x1ffd8; 0xa3c ]; [ 0x20050; 0x20050 ] ]
+    .globalOffsets = [ [ 0x1fda8; 0xaa0 ]; [ 0x1fdb0; 0xa4c ]; [ 0x1ffd8; 0x8c0 ]; [ 0x20050; 0x20050 ] ]
   };
   .initial_memory = [
   {
@@ -333,8 +331,8 @@ prog entry @main_2620 {
     .size = 0xc0;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/1vxl5EBBJhZwBTDA04IvQFNvAcqfuM/qrgNF4QOYGBCEYfxD0DVMwLFoVJgcAJJnBVJ/AKSODuS+AMkcS4k";
-      "cQCivgaJwAAAAA=="
+      "H4sIAAAAAAAA/1vxl5EBBJhZwBTDAi4IvQFN3AcqfuM/qvgBDggdwMCEIg7jH4CqZwSKQ6XA4ASSOCuS+AUkcXYk8QdI4lxI";
+      "4gD/s1ofwAAAAA=="
     ]
   };
   {
@@ -352,7 +350,7 @@ prog entry @main_2620 {
     .address = 0x7f0;
     .size = 0x1c;
     .readOnly = false;
-    .bytes = [ "H4sIAAAAAAAA/7NXZr76t3r/yr/MDBPtGBim/K0+uGI/UOwAc/w1AAboOgUcAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA/7NXZr76t3r/yr/MDBPzGBim/K0+uGI/UOwAc/w1AGIgY80cAAAA" ]
   };
   {
     .name = ".plt";
@@ -367,55 +365,55 @@ prog entry @main_2620 {
   {
     .name = ".text";
     .address = 0x8c0;
-    .size = 0x2c4;
+    .size = 0x354;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/41RMU/CQBh9x3XDhMHBSQE10Ti4GiaLDt2JO8gfcDUhhmrcXGgcXNFJO7uwKLo6WQPRxKEQNCY6kDBdAqnv";
-      "ilUkxjC83OXde+/ed5dflI1Z2N4c8SLhtqSp2gtwXiUcH+jiw1KSZwZxHwQnvobm3yxlApePQTBTl/lmMiUbfwECFRSEI7im";
-      "ua4D73Vgq8WMtG+pbWZ0pXARSzZ1zrg+DdzN98sP2an9o3Q/e3xDfZveja6liqE39u0dlK4uBuzdi0NN018oZjOmwFrYt2Mp";
-      "m/owf9lUZ5zjiUjBzhWKItOLm2pQuj0fn+WZ80W5fgIq9FeF49Ib7m3hACbnsHMCqI1yQpAzvjh6TrWH7xjdE+VC2N4Bz1p8";
-      "/8jPLDWape/ubMLRfwGgEqssUWN7vjTcctSFdxyO9SJqzF3RHlRXnd0R7Z7+ywQ1xm/NzrBn7qfn9bBnyN1MwnkTcpPm/ct9";
-      "Aqz+LRfEAgAA"
+      "H4sIAAAAAAAA/6VRv0vDUBD+Xp+41C2CUNA26iC4uEmnJh3Mbt0b+xeI4pTB6OrS4ODcrenk4CKIWnFzi7QgqKS1/gAdCqXD";
+      "g4Z4L4pDK0XtcNzj7t73fXdfYJ26YLYXcDidHHMVhuLWHnO6CsR9GB7GgGIWiw6H7TGKLkfFf4SznYBoUN/nSuWFspnQxCTN";
+      "MmgndnPJefjqtSiXxj9rt/TuKpoA7NVOTncD66p8wfP1ZIrX/hv5eV6bJl0zFE+krcE10ZyD80z7+EAb74aQ2scoSsR/JHXJ";
+      "+qshNOC4HIZTwzSA7gGTOYyySjkDvF0Aaw3CUH1DrBNGm7MKYsm6xOmfV4Hr2d7OjT6xu6/29IMqzTfpb7ZtiEL0N/b9N7DO";
+      "3MiHOIT0wSzoaY1hOdLbMoRN8xH+giY2aQ95zxTd0iywdCeuicC6HLjnHe037H79nNJ76ZvEZ+Sn9DWTWgmSQCDrG1SXXOSh";
+      "9xPfIP65K/2WHIFVHZj/Zd8bsT8q/5/6H5/WP2pUAwAA"
     ]
   };
   {
     .name = ".fini";
-    .address = 0xb84;
+    .address = 0xc14;
     .size = 0x18;
     .readOnly = false;
     .bytes = [ "H4sIAAAAAAAA/7NXZr76t3r/yr/MDBP/Vh9csR/IP8Acfw0AdjFaHxgAAAA=" ]
   };
   {
     .name = ".rodata";
-    .address = 0xba0;
-    .size = 0x18;
+    .address = 0xc30;
+    .size = 0x20;
     .readOnly = true;
-    .bytes = [ "H4sIAAAAAAAA/2NkYGIAAdUULgZkAAD3Oqd7GAAAAA==" ]
+    .bytes = [ "H4sIAAAAAAAA/2NkYGIAAdUULjDNDMQcDAgAAKIKQDkgAAAA" ]
   };
   {
     .name = ".eh_frame_hdr";
-    .address = 0xbb8;
+    .address = 0xc50;
     .size = 0x84;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/w3FoRlAQBiA4f8oGt0CwoXrihEEQ1w0gHgDXBREA1w0gAEEwRgGwO8L7/OaOm+DiJQoXtWFPSeeeeeTL24+";
-      "1YctV0YksGOrqj13PPLAkT0nnvjgyDevXGUiGzv+AZnbIn+EAAAA"
+      "H4sIAAAAAAAA/xXMsRFAQBSE4XcU4HKJEgQyiRKuBCUoQaAABQiUoASBAoRCJSjgWP8FO9/szM66Mm8nMyvIEKXGmdWvtNBn";
+      "3HDHAyNeGD4ppj169if2+OCIXtKafnDHgDcOaBm/WOGGHf5WLybfhAAAAA=="
     ]
   };
   {
     .name = ".eh_frame";
-    .address = 0xc40;
-    .size = 0x1cc;
+    .address = 0xcd8;
+    .size = 0x1dc;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/xNggADGqiAGlgo5RmkeeQYBIF8CiFP+/P9vApJ0ZJcDiekA8QagmAFUD0jMAYjPAMVsoGIKQBwCxF+AYh5g";
-      "vXwKc1nmMTtNZvK7d/cyH0xfBRCr/P3/nwWqTwaIe4BYBCgWgaQv5N5dPpj8GiD2AcqvQJLPQJI/A8RXgPIiEHmBuUzzGJ2R";
-      "5N8A8Qk88jyMDAx78MjrAOU34JH3AcovwSOfA5SfgUe+Byjfg0d+DVC+AYc8CAAAoTaiMcwBAAA="
+      "H4sIAAAAAAAA/xNggADGqiAGlgo5RmkeeQYBIF8CiHv+/P9vApJ0ZJcDiekA8Q2gmAFUD0jMAYi/AMVsoGIKQBwCxDJ////3";
+      "AOvlU5jLMo/ZaTKT3727l/lg+iqA2AeohgVJXw8QRwDFXFD1+cL0aQDxBiA2+f3/fwtEjcNcjnnszpPZprA6T2WJvHf36uUr";
+      "YKUMMkB8B4gzgOaJQNQKzGWax+h87y4fTP4PAXkZRvzyNgTkYwjI1xCQn0NAfg8eeRAAAHLBxqfcAQAA"
     ]
   };
   {
     .name = ".note.ABI-tag";
-    .address = 0xe0c;
+    .address = 0xeb4;
     .size = 0x20;
     .readOnly = false;
     .bytes = [ "H4sIAAAAAAAA/2NhYGAQAGJGIHb3C2UAAWYg5mKAAADshLlpIAAAAA==" ]
@@ -425,14 +423,14 @@ prog entry @main_2620 {
     .address = 0x1fda8;
     .size = 0x8;
     .readOnly = false;
-    .bytes = [ "H4sIAAAAAAAA/3vAyQAGANu/anMIAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA/1vAxQAGAKtnH2sIAAAA" ]
   };
   {
     .name = ".fini_array";
     .address = 0x1fdb0;
     .size = 0x8;
     .readOnly = false;
-    .bytes = [ "H4sIAAAAAAAA/+vhZAADAC8KLvQIAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA//PhYgADAIVXYL8IAAAA" ]
   };
   {
     .name = ".dynamic";
@@ -440,9 +438,9 @@ prog entry @main_2620 {
     .size = 0x200;
     .readOnly = false;
     .bytes = [
-      "H4sIAAAAAAAA/62QsQ3CMBBFLxAckkAHAgL0GSkj0CCWoGUEekpGYAxGoEyDBIqII7h3hVNzzdPz99k+R6K1h1t4ghNYJ8op";
-      "fsyVK/zyiX5c42NYwCv5ppfH1j9QPlt/+PKFj8h3bHT4cqjM8LMeL7nlcC5h0SYPrw1cI3c4g4wrCzsvCdcrF85xg2nv/sbr";
-      "PLa1xUv6Pc7zpcYd+Ru3f/p3de3s+qUAAgAA"
+      "H4sIAAAAAAAA/62QvQ3CMBBGL/w4JEAHSiCkz0iMQIOYhBHoKRmBMRghZZpIIESMwr0rnJprnp4/n+1zJFpHWMIzXMAmVi7x";
+      "FcEGv36iHwt8BrfwRr4b5BPrHynbzp96PvEp+YGNDs/HyhS/6PEytxyuJSzapPbawDXysLkg40pm58Xh+t6Fc9xhMrj/7XUe";
+      "29rhFf0e5/nS4I78hds//bu+OyXhAQACAAA="
     ]
   };
   {
@@ -450,7 +448,7 @@ prog entry @main_2620 {
     .address = 0x1ffb8;
     .size = 0x30;
     .readOnly = true;
-    .bytes = [ "H4sIAAAAAAAA/9vxl5EBH7DhQuUDAFaA6TowAAAA" ]
+    .bytes = [ "H4sIAAAAAAAA/9vxl5EBHzjAgcoHAOK81rYwAAAA" ]
   };
   {
     .name = ".got.plt";
