@@ -306,7 +306,7 @@ proc @main_1984 () -> ()
     $R2: bv64 := bvconcat(extract(64, 32, $R2:bv64), bvconcat(0x6:bv16, extract(16, 0, $R2:bv64))) { .label = "2076_0" };
     $R0: bv64 := $R21:bv64 { .label = "2080_0" };
     $R30: bv64 := 0x828:bv64 { .label = "2084_0" };
-    goto(%FUN_760_entry_9);
+    goto(%FUN_760_entry_7);
   ];
   block %main_93 {.address = 0x7fc; .originalLabel = "5jlZESzjQ4a4yO3+e1nyHQ=="} [
     goto(%main_91);
@@ -319,7 +319,7 @@ proc @main_1984 () -> ()
     $R2: bv64 := bvconcat(extract(64, 32, $R2:bv64), bvconcat(0x6:bv16, extract(16, 0, $R2:bv64))) { .label = "2056_0" };
     $R0: bv64 := bvadd($R0:bv64, 0x530:bv64) { .label = "2060_0" };
     $R30: bv64 := 0x814:bv64 { .label = "2064_0" };
-    goto(%FUN_760_entry_7);
+    goto(%FUN_760_entry_9);
   ];
   block %main_97 {.address = 0x7f0; .originalLabel = "H7LPJaZbQvWx+VL+kBk//Q=="} [
     store le $mem $R20:bv64 extract(32, 0, $R0:bv64) 32 { .label = "2032_0" };
@@ -337,8 +337,8 @@ proc @main_1984 () -> ()
     call @__VERIFIER_nondet_int_2720 ();
     goto(%main_97);
   ];
-  block %_inlineret_3 [
-    goto(%main_93);
+  block %_inlineret_3 {.originalLabel = "I2aaHzp+TUWUl9oP4OxUPg=="} [
+    goto(%main_89);
   ];
   block %FUN_760_entry_7 {.address = 0x760} [
     var R30_begin_FUN_760_1888_1: bv64 := $R30:bv64;
@@ -353,8 +353,8 @@ proc @main_1984 () -> ()
   block %FUN_760_basil_return_1_8 [
     goto(%_inlineret_3);
   ];
-  block %_inlineret_4 {.originalLabel = "I2aaHzp+TUWUl9oP4OxUPg=="} [
-    goto(%main_89);
+  block %_inlineret_4 [
+    goto(%main_93);
   ];
   block %FUN_760_entry_9 {.address = 0x760} [
     var R30_begin_FUN_760_1888_3: bv64 := $R30:bv64;

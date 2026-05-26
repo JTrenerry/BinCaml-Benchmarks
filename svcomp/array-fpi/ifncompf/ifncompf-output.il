@@ -275,7 +275,7 @@ proc @main_1984 () -> ()
     store le $stack bvadd($R31:bv64, 0x20:bv64) $R5:bv64 64 { .label = "2064_0" };
     $R0: bv64 := zero_extend(32, bvconcat(extract(29, 0, $R0:bv64), 0x0:bv3)) { .label = "2068_0" };
     $R30: bv64 := 0x81c:bv64 { .label = "2072_0" };
-    goto(%FUN_780_entry_5);
+    goto(%FUN_780_entry_9);
   ];
   block %main_91 {.address = 0x7f4; .originalLabel = "Nc5WfkQBRwahCMMkX4LB9A=="} [
     $R2: bv64 := $R0:bv64 { .label = "2036_0" };
@@ -293,7 +293,7 @@ proc @main_1984 () -> ()
     guard boolnot(booland(eq($CF:bv1, 0x1:bv1), eq($ZF:bv1, 0x0:bv1)));
     $R0: bv64 := zero_extend(32, bvconcat(extract(29, 0, $R0:bv64), 0x0:bv3)) { .label = "2028_0" };
     $R30: bv64 := 0x7f4:bv64 { .label = "2032_0" };
-    goto(%FUN_780_entry_9);
+    goto(%FUN_780_entry_5);
   ];
   block %main_97 {.address = 0x7e0; .originalLabel = "WTjM+CpMSlaCQoaCOxiagA=="} [
     goto(%main_11, %main_95);
@@ -317,8 +317,8 @@ proc @main_1984 () -> ()
     $NF: bv1 := extract(32, 31, $R0:bv64) { .label = "2008_3" };
     goto(%main_7, %main_99);
   ];
-  block %_inlineret_3 {.originalLabel = "VbaiJkWGQ4ukB7rQdAOUrw=="} [
-    goto(%main_87);
+  block %_inlineret_3 [
+    goto(%main_93);
   ];
   block %FUN_780_entry_5 {.address = 0x780} [
     var R30_begin_FUN_780_1920_1: bv64 := $R30:bv64;
@@ -349,8 +349,8 @@ proc @main_1984 () -> ()
   block %FUN_780_basil_return_1_8 [
     goto(%_inlineret_4);
   ];
-  block %_inlineret_5 [
-    goto(%main_93);
+  block %_inlineret_5 {.originalLabel = "VbaiJkWGQ4ukB7rQdAOUrw=="} [
+    goto(%main_87);
   ];
   block %FUN_780_entry_9 {.address = 0x780} [
     var R30_begin_FUN_780_1920_5: bv64 := $R30:bv64;

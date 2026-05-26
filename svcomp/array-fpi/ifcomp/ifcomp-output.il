@@ -54,7 +54,7 @@ proc @main_1984 () -> ()
   block %main_11 [
     guard booland(eq($CF:bv1, 0x1:bv1), eq($ZF:bv1, 0x0:bv1));
     $R30: bv64 := 0x8fc:bv64 { .label = "2296_0" };
-    goto(%FUN_7a0_entry_15);
+    goto(%FUN_7a0_entry_17);
   ];
   block %main_13 [
     guard boolnot(booland(eq($NF:bv1, $VF:bv1), eq($ZF:bv1, 0x0:bv1)));
@@ -244,7 +244,7 @@ proc @main_1984 () -> ()
     store le $stack bvadd($R31:bv64, 0x28:bv64) $R4:bv64 64 { .label = "2044_0" };
     $R0: bv64 := zero_extend(32, bvconcat(extract(29, 0, $R0:bv64), 0x0:bv3)) { .label = "2048_0" };
     $R30: bv64 := 0x808:bv64 { .label = "2052_0" };
-    goto(%FUN_780_entry_9);
+    goto(%FUN_780_entry_5);
   ];
   block %main_69 {.address = 0x7ec; .originalLabel = "vIU4IpBoQ7iHGSsu/mSe3g=="} [
     goto(%main_67);
@@ -253,7 +253,7 @@ proc @main_1984 () -> ()
     guard boolnot(booland(eq($CF:bv1, 0x1:bv1), eq($ZF:bv1, 0x0:bv1)));
     $R0: bv64 := zero_extend(32, bvconcat(extract(29, 0, $R0:bv64), 0x0:bv3)) { .label = "2028_0" };
     $R30: bv64 := 0x7f4:bv64 { .label = "2032_0" };
-    goto(%FUN_780_entry_5);
+    goto(%FUN_780_entry_9);
   ];
   block %main_73 {.address = 0x7e0; .originalLabel = "QIZPtsaTQjiAsr+paN6ljw=="} [
     goto(%main_11, %main_71);
@@ -277,8 +277,8 @@ proc @main_1984 () -> ()
     $NF: bv1 := extract(32, 31, $R0:bv64) { .label = "2008_3" };
     goto(%main_7, %main_75);
   ];
-  block %_inlineret_3 [
-    goto(%main_69);
+  block %_inlineret_3 {.originalLabel = "9oceKFiPSN69RSkX65b7GQ=="} [
+    goto(%main_65);
   ];
   block %FUN_780_entry_5 {.address = 0x780} [
     var R30_begin_FUN_780_1920_1: bv64 := $R30:bv64;
@@ -309,8 +309,8 @@ proc @main_1984 () -> ()
   block %FUN_780_basil_return_1_8 [
     goto(%_inlineret_4);
   ];
-  block %_inlineret_5 {.originalLabel = "9oceKFiPSN69RSkX65b7GQ=="} [
-    goto(%main_65);
+  block %_inlineret_5 [
+    goto(%main_69);
   ];
   block %FUN_780_entry_9 {.address = 0x780} [
     var R30_begin_FUN_780_1920_5: bv64 := $R30:bv64;
@@ -328,7 +328,7 @@ proc @main_1984 () -> ()
   block %_inlineret_6 [
     goto(%main_basil_return_1);
   ];
-  block %FUN_7a0_entry_15 {.address = 0x7a0} [
+  block %FUN_7a0_entry_17 {.address = 0x7a0} [
     var R30_begin_FUN_7a0_1952_7: bv64 := $R30:bv64;
     $R16: bv64 := 0x20000:bv64 { .label = "1952_0" };
     var Exp14__5_8: bv64 := load le $mem bvadd($R16:bv64, 0x20:bv64) 64 { .label = "1956_0$0" };
@@ -336,9 +336,9 @@ proc @main_1984 () -> ()
     $R16: bv64 := bvadd($R16:bv64, 0x20:bv64) { .label = "1960_0" };
     assert eq($R30:bv64, R30_begin_FUN_7a0_1952_7:bv64) { .comment = "R30 = R30_in" };
     call @abort () { .label = "1964_2" };
-    goto(%FUN_7a0_basil_return_1_16);
+    goto(%FUN_7a0_basil_return_1_18);
   ];
-  block %FUN_7a0_basil_return_1_16 [
+  block %FUN_7a0_basil_return_1_18 [
     goto(%_inlineret_6);
   ];
   block %main_basil_return_1 [
