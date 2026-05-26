@@ -6,6 +6,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixpkgs-mill.url = "github:NixOS/nixpkgs/914a3a6a1024f495af1f5a35c420b170d8b946dd";
     pac-nix.url = "github:katrinafyi/pac-nix";
+    bincaml.url = "github:agle/bincaml";
   };
 
   outputs =
@@ -15,6 +16,7 @@
       nixpkgs-mill,
       flake-utils,
       pac-nix,
+      bincaml,
     }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (
       system:
@@ -41,6 +43,9 @@
               pkgsCross.aarch64-multiplatform-musl.pkgsBuildHost.gcc
               pkgsCross.aarch64-multiplatform-musl.pkgsBuildHost.clang
               pkgsCross.aarch64-multiplatform-musl.pkgsBuildHost.llvmPackages.clang
+
+              boogie
+              cvc5
             ])
             ++ (with millPkgs; [
               # mill
@@ -51,6 +56,7 @@
               pac-nix.packages.${system}.gtirb-pprinter
               pac-nix.packages.${system}.basil
               pac-nix.packages.${system}.asli
+              bincaml.defaultPackage.${system}
             ];
         };
       }

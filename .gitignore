@@ -7,3 +7,4 @@
 *.bpl
 .direnv
 .envrc
+test_out
