@@ -6,3 +6,4 @@
 *.scala
 *.bpl
 .direnv
+.envrc
